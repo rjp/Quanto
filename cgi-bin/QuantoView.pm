@@ -54,7 +54,7 @@ sub draw_stats {
                        $q->Tr($q->th({colspan => 4},''),
                               $q->th({id=>'time',colspan => 3},'Time (ms)'),
                               $q->th({id=>'rows',colspan => 3},'Rows'),
-                              $q->th(''),
+                              $q->th({id=>'query'},''),
                              ),
                        $q->Tr($q->th('Module'),
                               $q->th('Line'),
