@@ -1,13 +1,9 @@
-Content-Type: text/html; charset=ISO-8859-1
-
-<div id="content"></div><!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
 <head>
 <title>Quanto!</title>
 <meta http-equiv="refresh" content="30" />
-<link rel="stylesheet" type="text/css" href="/style.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js" type="text/javascript"></script>
 <script src="/quanto.js" type="text/javascript"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
@@ -15,7 +11,7 @@ Content-Type: text/html; charset=ISO-8859-1
 <body>
 <form method="post" action="" enctype="multipart/form-data">
 <input type="submit" name="clear stats" value="clear stats" /></form>
-<table border="1"><tr><th colspan="4"></th> <th colspan="3" id="time">Time (ms)</th> <th colspan="3" id="rows">Rows</th> <th></th></tr> <tr><th>Module</th> <th>Line</th> <th>Called</th> <th>Count</th> <th id="time">Total</th> <th id="time">Avg.</th> <th id="time">Max</th> <th id="rows">Total</th> <th id="rows">Avg.</th> <th id="rows">Max</th> <th id="query">Query</th></tr>
+<table border="1"><tr><th colspan="4"></th> <th colspan="3" id="time">Time (ms)</th> <th colspan="3" id="rows">Rows</th> <th id="query"></th></tr> <tr><th>Module</th> <th>Line</th> <th>Called</th> <th>Count</th> <th id="time">Total</th> <th id="time">Avg.</th> <th id="time">Max</th> <th id="rows">Total</th> <th id="rows">Avg.</th> <th id="rows">Max</th> <th id="query">Query</th></tr>
  <tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/encoding_to_transform.pm#L41>encoding_to_transform</a></td> <td>41</td> <td>state51::Base::insert </td> <td>590</td> <td id="time">165.213</td> <td id="time">0.280022</td> <td id="time">23.097</td> <td id="rows">296</td> <td id="rows">0.501695</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">UPDATE Tangram SET mark = LAST_INSERT_ID(mark + 1)</div></td></tr>
 <tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/encoding_to_transform.pm#L24>encoding_to_transform</a></td> <td>24</td> <td>state51::Base::fetch </td> <td>199</td> <td id="time">84.75</td> <td id="time">0.425879</td> <td id="time">4.311</td> <td id="rows">100</td> <td id="rows">0.502513</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
     t2.id,
