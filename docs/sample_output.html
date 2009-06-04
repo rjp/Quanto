@@ -1,0 +1,2796 @@
+Content-Type: text/html; charset=ISO-8859-1
+
+<div id="content"></div><!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>Quanto!</title>
+<meta http-equiv="refresh" content="30" />
+<link rel="stylesheet" type="text/css" href="/style.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js" type="text/javascript"></script>
+<script src="/quanto.js" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body>
+<form method="post" action="" enctype="multipart/form-data">
+<input type="submit" name="clear stats" value="clear stats" /></form>
+<table border="1"><tr><th colspan="4"></th> <th colspan="3" id="time">Time (ms)</th> <th colspan="3" id="rows">Rows</th> <th></th></tr> <tr><th>Module</th> <th>Line</th> <th>Called</th> <th>Count</th> <th id="time">Total</th> <th id="time">Avg.</th> <th id="time">Max</th> <th id="rows">Total</th> <th id="rows">Avg.</th> <th id="rows">Max</th> <th id="query">Query</th></tr>
+ <tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/encoding_to_transform.pm#L41>encoding_to_transform</a></td> <td>41</td> <td>state51::Base::insert </td> <td>590</td> <td id="time">165.213</td> <td id="time">0.280022</td> <td id="time">23.097</td> <td id="rows">296</td> <td id="rows">0.501695</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">UPDATE Tangram SET mark = LAST_INSERT_ID(mark + 1)</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/encoding_to_transform.pm#L24>encoding_to_transform</a></td> <td>24</td> <td>state51::Base::fetch </td> <td>199</td> <td id="time">84.75</td> <td id="time">0.425879</td> <td id="time">4.311</td> <td id="rows">100</td> <td id="rows">0.502513</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.include_packshot_in_encode,
+    t3.include_metadata_in_encode,
+    t3.preview_length,
+    t3.to,
+    t3.to_type,
+    t3.from,
+    t3.from_type,
+    t3.name,
+    t3.family_options,
+    t3.description,
+    t3.family,
+    t3.modify_time
+FROM
+    state51__Base t2,
+    state51__TransformStep t3
+WHERE
+    t2.id = t3.id           AND
+    (t3.name = 'medium_mp3')
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Country.pm#L139>Country</a></td> <td>139</td> <td>state51::Base::fetch </td> <td>87</td> <td id="time">321.975</td> <td id="time">3.70086</td> <td id="time">11.506</td> <td id="rows">21228</td> <td id="rows">244</td> <td id="rows">244</td> <td id="query"><p></p><div class="toggle">SELECT
+    t1.id,
+    t1._type,
+    t1.create_time,
+    t2.population,
+    t2.dms_lat,
+    t2.gns_ufi,
+    t2.dms_long,
+    t2.identifier_unique,
+    t2.height,
+    t2.source,
+    t2.source_type,
+    t2.subcountry,
+    t2.subcountry_type,
+    t2.descriptor,
+    t2.descriptor_type,
+    t2.region,
+    t2.region_type,
+    t2.town,
+    t2.town_type,
+    t2.settlement,
+    t2.settlement_type,
+    t2.feature_id,
+    t2.postal_sort,
+    t2.identifier_string,
+    t2.alternate_names,
+    t2.weathercomid,
+    t2.utm,
+    t2.name,
+    t2.modify_time,
+    t2.identifier,
+    t2.country,
+    t2.country_type,
+    t2.dd_long,
+    t2.dd_lat,
+    t2.validated_regions,
+    t2.has_postcodes,
+    t2.validated_towns,
+    t2.postage_zone,
+    t2.iso_code3,
+    t2.iso_code2,
+    t2.iso_name,
+    t2.timezones
+FROM
+    state51__Base t1,
+    state51__Place t2
+WHERE
+    t1.id = t2.id           AND
+    t1._type = 22           AND
+    (t2.iso_code2 like '%%%%%%')
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/ReleaseFormat.pm#L1710>ReleaseFormat</a></td> <td>1710</td> <td>state51::Base::fetch </td> <td>87</td> <td id="time">64.462</td> <td id="time">0.740943</td> <td id="time">1.379</td> <td id="rows">2001</td> <td id="rows">23</td> <td id="rows">23</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.short_name,
+    t3.name,
+    t3.code,
+    t3.modify_time,
+    t3.physical
+FROM
+    state51__Base t2,
+    state51__Classification t3
+WHERE
+    t2.id = t3.id     AND
+    t2._type = 180
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/ReleaseFormat.pm#L1722>ReleaseFormat</a></td> <td>1722</td> <td>state51::Base::fetch </td> <td>87</td> <td id="time">104.425</td> <td id="time">1.20029</td> <td id="time">5.339</td> <td id="rows">5307</td> <td id="rows">61</td> <td id="rows">61</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.short_name,
+    t3.name,
+    t3.code,
+    t3.modify_time
+FROM
+    state51__Base t2,
+    state51__Classification t3
+WHERE
+    t2.id = t3.id     AND
+    t2._type = 256
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/ReleaseFormat.pm#L1728>ReleaseFormat</a></td> <td>1728</td> <td>state51::Base::fetch </td> <td>87</td> <td id="time">47.652</td> <td id="time">0.547724</td> <td id="time">1.2</td> <td id="rows">1131</td> <td id="rows">13</td> <td id="rows">13</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.short_name,
+    t3.name,
+    t3.code,
+    t3.modify_time
+FROM
+    state51__Base t2,
+    state51__Classification t3
+WHERE
+    t2.id = t3.id     AND
+    t2._type = 181
+</div></td></tr>
+<tr><td>(eval 2719)</td> <td>1</td> <td>Tangram::RefOnDemand::FETCH </td> <td>86</td> <td id="time">40.287</td> <td id="time">0.468453</td> <td id="time">7.325</td> <td id="rows">86</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__Asset.creator,
+    state51__Asset.creator_type,
+    state51__Asset.length,
+    state51__Asset.source,
+    state51__Asset.source_type,
+    state51__Asset.created_in,
+    state51__Asset.created_in_type,
+    state51__Asset.label,
+    state51__Asset.label_type,
+    state51__Asset.isrc,
+    state51__Asset.title,
+    state51__Asset.modify_time
+FROM
+    state51__Base,
+    state51__Asset
+WHERE
+    state51__Base.id = '104411060'	AND
+    state51__Base.id = state51__Asset.id</div></td></tr>
+<tr><td>(eval 1806)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>84</td> <td id="time">38.392</td> <td id="time">0.457048</td> <td id="time">1.34</td> <td id="rows">108</td> <td id="rows">1.28571</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.clean,
+    t3.musicbrainz_id,
+    t3.status,
+    t3.email,
+    t3.name,
+    t3.also_match,
+    t3.modify_time,
+    t3.identifier,
+    t3.profile,
+    t4.slot
+FROM
+    state51__Base t2,
+    state51__Artist t3,
+    state51__Recording__artist t4
+WHERE
+    t2.id = t3.id           AND
+    t4.coll = 104411060 AND t4.item = t2.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Asset.pm#L412>Asset</a></td> <td>412</td> <td>state51::Base::fetch </td> <td>84</td> <td id="time">43.889</td> <td id="time">0.522488</td> <td id="time">1.67</td> <td id="rows">42</td> <td id="rows">0.5</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t5.id,
+    t5._type,
+    t5.create_time,
+    t6.source,
+    t6.source_type,
+    t6.asset,
+    t6.asset_type,
+    t6.contributor,
+    t6.contributor_type,
+    t6.credit_name,
+    t6.type,
+    t6.modify_time
+FROM
+    state51__Base t5,
+    state51__Contribution t6
+WHERE
+    t5.id = t6.id           AND
+    (t6.asset = 104411060)
+</div></td></tr>
+<tr><td>/usr/share/perl5/Moose/Meta/Method/Delegation</td> <td>91</td> <td>state51::Tangram::Storage::connect </td> <td>74</td> <td id="time">14.299</td> <td id="time">0.19323</td> <td id="time">0.479</td> <td id="rows">74</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">select * from (select 1+1) test</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/ReleaseFormat.pm#L1206>ReleaseFormat</a></td> <td>1206</td> <td>state51::Base::fetch </td> <td>52</td> <td id="time">43.896</td> <td id="time">0.844154</td> <td id="time">2.05</td> <td id="rows">1092</td> <td id="rows">21</td> <td id="rows">21</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.play_gapless,
+    t3.hidden,
+    t3.preview_start_time,
+    t3.volume_part,
+    t3.altered_length,
+    t3.explicit_content,
+    t3.musicset,
+    t3.musicset_type,
+    t3.releaseformat,
+    t3.releaseformat_type,
+    t3.parent,
+    t3.parent_type,
+    t3.recording,
+    t3.recording_type,
+    t3.display_artist,
+    t3.track_number,
+    t3.p_copy,
+    t3.mix_version,
+    t3.c_copy,
+    t3.label_copy,
+    t3.modify_time
+FROM
+    state51__Base t2,
+    state51__Trackv2 t3
+WHERE
+    t2.id = t3.id           AND
+    (t3.releaseformat = 104411058)
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Handler/Auth/Ed.pm#L79>Handler/Auth/Ed</a></td> <td>79</td> <td>state51::Base::fetch </td> <td>50</td> <td id="time">25.949</td> <td id="time">0.51898</td> <td id="time">1.203</td> <td id="rows">100</td> <td id="rows">2</td> <td id="rows">2</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.name,
+    t3.modify_time,
+    t3.collective,
+    t3.collective_type
+FROM
+    state51__Base t2,
+    state51__Authority t3
+WHERE
+    t2.id = t3.id           AND
+    t2._type IN (58, 59)    AND
+    (t3.name = 'cultivator' OR t3.name = 'editor')
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Handler/Auth/Ed.pm#L35>Handler/Auth/Ed</a></td> <td>35</td> <td>state51::Base::fetch </td> <td>50</td> <td id="time">22.94</td> <td id="time">0.4588</td> <td id="time">4.65</td> <td id="rows">50</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.name,
+    t3.modify_time
+FROM
+    state51__Base t2,
+    state51__Collective t3
+WHERE
+    t2.id = t3.id           AND
+    (t3.name = 'state51')
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Role.pm#L274>Role</a></td> <td>274</td> <td>state51::Tangram::Driver::mysql::Storage::select </td> <td>50</td> <td id="time">58.455</td> <td id="time">1.1691</td> <td id="time">11.747</td> <td id="rows">50</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.timezone,
+    t3.email_score,
+    t3.uniq,
+    t3.identifier_unique,
+    t3.mail_pref,
+    t3.person,
+    t3.person_type,
+    t3.mobile_network,
+    t3.name,
+    t3.mobile_model,
+    t3.address_postcode,
+    t3.secret,
+    t3.phone,
+    t3.mobile,
+    t3.address_region,
+    t3.email,
+    t3.address_town,
+    t3.identifier_string,
+    t3.fax,
+    t3.mobile_manufacturer,
+    t3.modify_time,
+    t3.identifier,
+    t3.address,
+    t3.country,
+    t3.country_type,
+    t3.age,
+    t3.parent,
+    t3.parent_type,
+    t3.collective,
+    t3.collective_type,
+    t3.newemail_key,
+    t3.password,
+    t3.nickname,
+    t3.origin,
+    t3.sex,
+    t3.newemail,
+    t3.dob
+FROM
+    state51__Base t2,
+    state51__Role t3,
+    state51__Role__authorities tl1001
+WHERE
+    t2.id = t3.id           AND
+    t2._type = 6            AND
+    (t3.email = 'andy@state51.co.uk' AND t3.password = 'catweezle' AND t3.collective = 5948 AND tl1001.coll = t2.id AND tl1001.item = 64077)
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Asset.pm#L449>Asset</a></td> <td>449</td> <td>state51::Base::fetch </td> <td>42</td> <td id="time">14.993</td> <td id="time">0.356976</td> <td id="time">1.004</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.source,
+    t3.source_type,
+    t3.asset,
+    t3.asset_type,
+    t3.contributor,
+    t3.contributor_type,
+    t3.credit_name,
+    t3.type,
+    t3.modify_time
+FROM
+    state51__Base t2,
+    state51__Contribution t3
+WHERE
+    t2.id = t3.id           AND
+    (t3.asset = 104514750)
+</div></td></tr>
+<tr><td>(eval 1801)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>42</td> <td id="time">18.641</td> <td id="time">0.443833</td> <td id="time">0.511</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.value,
+    t3.modify_time,
+    t4.slot
+FROM
+    state51__Base t2,
+    state51__Identifier t3,
+    state51__Asset__identifiers t4
+WHERE
+    t2.id = t3.id           AND
+    t2._type IN (246, 247, 260, 267, 258)    AND
+    t4.coll = 104411060 AND t4.item = t2.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/View/Ed/Base.pm#L43>View/Ed/Base</a></td> <td>43</td> <td>state51::Base::fetch </td> <td>25</td> <td id="time">8.677</td> <td id="time">0.34708</td> <td id="time">0.606</td> <td id="rows">25</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.name,
+    t3.modify_time
+FROM
+    state51__Base t2,
+    state51__Collective t3
+WHERE
+    t2.id = t3.id           AND
+    (t3.name = 'state51')
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/View/Ed/Base.pm#L62>View/Ed/Base</a></td> <td>62</td> <td>state51::Base::fetch </td> <td>25</td> <td id="time">15.505</td> <td id="time">0.6202</td> <td id="time">3.914</td> <td id="rows">25</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t5.id,
+    t5._type,
+    t5.create_time,
+    t6.name,
+    t6.modify_time
+FROM
+    state51__Base t5,
+    state51__Collective t6
+WHERE
+    t5.id = t6.id           AND
+    (t6.name = 'state51')
+</div></td></tr>
+<tr><td>(eval 682)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>25</td> <td id="time">169.2</td> <td id="time">6.768</td> <td id="time">25.302</td> <td id="rows">6800</td> <td id="rows">272</td> <td id="rows">272</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.voucher_required,
+    t3.notify_email,
+    t3.name,
+    t3.modify_time,
+    t4.slot
+FROM
+    state51__Base t2,
+    state51__Source t3,
+    state51__Collective__Source t4
+WHERE
+    t2.id = t3.id           AND
+    t4.coll = 5948 AND t4.item = t2.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/View/Ed/Base.pm#L63>View/Ed/Base</a></td> <td>63</td> <td>state51::Base::fetch </td> <td>25</td> <td id="time">13.753</td> <td id="time">0.55012</td> <td id="time">1.006</td> <td id="rows">25</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.timezone,
+    t3.email_score,
+    t3.uniq,
+    t3.identifier_unique,
+    t3.mail_pref,
+    t3.person,
+    t3.person_type,
+    t3.mobile_network,
+    t3.name,
+    t3.mobile_model,
+    t3.address_postcode,
+    t3.secret,
+    t3.phone,
+    t3.mobile,
+    t3.address_region,
+    t3.email,
+    t3.address_town,
+    t3.identifier_string,
+    t3.fax,
+    t3.mobile_manufacturer,
+    t3.modify_time,
+    t3.identifier,
+    t3.address,
+    t3.country,
+    t3.country_type,
+    t3.age,
+    t3.parent,
+    t3.parent_type,
+    t3.collective,
+    t3.collective_type,
+    t3.newemail_key,
+    t3.password,
+    t3.nickname,
+    t3.origin,
+    t3.sex,
+    t3.newemail,
+    t3.dob
+FROM
+    state51__Base t2,
+    state51__Role t3
+WHERE
+    t2.id = t3.id           AND
+    t2._type = 6            AND
+    (t3.email = 'andy@state51.co.uk' AND t3.password = 'catweezle' AND t3.collective = 5948)
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Use.pm#L681>Use</a></td> <td>681</td> <td>state51::Base::insert </td> <td>24</td> <td id="time">4.894</td> <td id="time">0.203917</td> <td id="time">0.346</td> <td id="rows">8</td> <td id="rows">0.333333</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">UPDATE Tangram SET mark = LAST_INSERT_ID(mark + 1)</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/View/Ed/View.pm#L27>View/Ed/View</a></td> <td>27</td> <td>state51::Tangram::Driver::mysql::Storage::load </td> <td>22</td> <td id="time">267.035</td> <td id="time">12.138</td> <td id="time">87.001</td> <td id="rows">18</td> <td id="rows">0.818182</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__Encoding.include_packshot_in_encode,
+    state51__Encoding.include_metadata_in_encode,
+    state51__Encoding.bitrate,
+    state51__Encoding.preview_length,
+    state51__Encoding.source,
+    state51__Encoding.source_type,
+    state51__Encoding.result_mime_minor,
+    state51__Encoding.codec,
+    state51__Encoding.channels,
+    state51__Encoding.name,
+    state51__Encoding.result_file_extension,
+    state51__Encoding.family_options,
+    state51__Encoding.description,
+    state51__Encoding.family,
+    state51__Encoding.modify_time
+FROM
+    state51__Base,
+    state51__Encoding
+WHERE
+    state51__Base.id = '6674362'	AND
+    state51__Base.id = state51__Encoding.id</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/MusicService.pm#L2260>MusicService</a></td> <td>2260</td> <td>state51::Base::fetch </td> <td>21</td> <td id="time">33.744</td> <td id="time">1.60686</td> <td id="time">7.816</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.filesize,
+    t3.stored,
+    t3.uploader_ip,
+    t3.identifier_unique,
+    t3.crc32,
+    t3.subject_date,
+    t3.asset_controller,
+    t3.asset_controller_type,
+    t3.status,
+    t3.source,
+    t3.source_type,
+    t3.mime_major,
+    t3.extension,
+    t3.credit,
+    t3.secret,
+    t3.directory,
+    t3.identifier,
+    t3.caption,
+    t3.identifier_string,
+    t3.mime_minor,
+    t3.digest,
+    t3.search_tags,
+    t3.modify_time,
+    t3.creator,
+    t3.creator_type,
+    t3.description,
+    t3.incomplete,
+    t3.width,
+    t3.height,
+    t3.recording,
+    t3.recording_type,
+    t3.subtitle_language,
+    t3.subtitle_language_type,
+    t3.encoding,
+    t3.encoding_type,
+    t3.length,
+    t3.bitrate
+FROM
+    state51__Base t2,
+    state51__File t3,
+    state51__File__Audio__tracks tl1005
+WHERE
+    t2.id = t3.id           AND
+    t2._type = 127          AND
+    ((t3.extension = 'mpg' OR t3.extension = 'wmv' OR t3.extension = 'avi') AND tl1005.coll = t2.id AND tl1005.item IN (104411061))
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/MusicService.pm#L2262>MusicService</a></td> <td>2262</td> <td>state51::Base::fetch </td> <td>21</td> <td id="time">26.988</td> <td id="time">1.28514</td> <td id="time">1.327</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.filesize,
+    t3.stored,
+    t3.uploader_ip,
+    t3.identifier_unique,
+    t3.crc32,
+    t3.subject_date,
+    t3.asset_controller,
+    t3.asset_controller_type,
+    t3.status,
+    t3.source,
+    t3.source_type,
+    t3.mime_major,
+    t3.extension,
+    t3.credit,
+    t3.secret,
+    t3.directory,
+    t3.identifier,
+    t3.caption,
+    t3.identifier_string,
+    t3.mime_minor,
+    t3.digest,
+    t3.search_tags,
+    t3.modify_time,
+    t3.creator,
+    t3.creator_type,
+    t3.description,
+    t3.incomplete,
+    t3.width,
+    t3.height,
+    t3.recording,
+    t3.recording_type,
+    t3.subtitle_language,
+    t3.subtitle_language_type,
+    t3.encoding,
+    t3.encoding_type,
+    t3.length,
+    t3.bitrate
+FROM
+    state51__Base t2,
+    state51__File t3,
+    state51__File__Audio__tracks tl1005
+WHERE
+    t2.id = t3.id           AND
+    t2._type = 127          AND
+    ((t3.extension = 'mpg' OR t3.extension = 'wmv' OR t3.extension = 'avi') AND tl1005.coll = t2.id AND tl1005.item IN (104411061))
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/MusicService.pm#L2302>MusicService</a></td> <td>2302</td> <td>state51::Base::fetch </td> <td>21</td> <td id="time">18.107</td> <td id="time">0.862238</td> <td id="time">1.245</td> <td id="rows">21</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t5.id,
+    t5._type,
+    t5.create_time,
+    t6.filesize,
+    t6.stored,
+    t6.uploader_ip,
+    t6.identifier_unique,
+    t6.crc32,
+    t6.subject_date,
+    t6.asset_controller,
+    t6.asset_controller_type,
+    t6.status,
+    t6.source,
+    t6.source_type,
+    t6.mime_major,
+    t6.extension,
+    t6.credit,
+    t6.secret,
+    t6.directory,
+    t6.identifier,
+    t6.caption,
+    t6.identifier_string,
+    t6.mime_minor,
+    t6.digest,
+    t6.search_tags,
+    t6.modify_time,
+    t6.creator,
+    t6.creator_type,
+    t6.description,
+    t6.incomplete,
+    t6.track,
+    t6.track_type,
+    t6.recording,
+    t6.recording_type,
+    t6.encoding,
+    t6.encoding_type,
+    t6.length,
+    t6.bitrate,
+    t6.channels
+FROM
+    state51__Base t5,
+    state51__File t6,
+    state51__File__Audio__tracks tl1006
+WHERE
+    t5.id = t6.id           AND
+    t5._type = 33           AND
+    (t6.extension = 'wav' AND tl1006.coll = t5.id AND tl1006.item IN (104411061))
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/MusicService.pm#L2304>MusicService</a></td> <td>2304</td> <td>state51::Base::fetch </td> <td>21</td> <td id="time">20.611</td> <td id="time">0.981476</td> <td id="time">1.722</td> <td id="rows">21</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t5.id,
+    t5._type,
+    t5.create_time,
+    t6.filesize,
+    t6.stored,
+    t6.uploader_ip,
+    t6.identifier_unique,
+    t6.crc32,
+    t6.subject_date,
+    t6.asset_controller,
+    t6.asset_controller_type,
+    t6.status,
+    t6.source,
+    t6.source_type,
+    t6.mime_major,
+    t6.extension,
+    t6.credit,
+    t6.secret,
+    t6.directory,
+    t6.identifier,
+    t6.caption,
+    t6.identifier_string,
+    t6.mime_minor,
+    t6.digest,
+    t6.search_tags,
+    t6.modify_time,
+    t6.creator,
+    t6.creator_type,
+    t6.description,
+    t6.incomplete,
+    t6.track,
+    t6.track_type,
+    t6.recording,
+    t6.recording_type,
+    t6.encoding,
+    t6.encoding_type,
+    t6.length,
+    t6.bitrate,
+    t6.channels
+FROM
+    state51__Base t5,
+    state51__File t6,
+    state51__File__Audio__tracks tl1006
+WHERE
+    t5.id = t6.id           AND
+    t5._type = 33           AND
+    (t6.extension = 'wav' AND tl1006.coll = t5.id AND tl1006.item IN (104411061))
+</div></td></tr>
+<tr><td>/space/templates/Ed/view/View/view.html</td> <td>114</td> <td>state51::Base::change_history </td> <td>19</td> <td id="time">744.707</td> <td id="time">39.1951</td> <td id="time">405.906</td> <td id="rows">102</td> <td id="rows">5.36842</td> <td id="rows">8</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.changed_by,
+    t3.changed_by_type,
+    t3.changed_object,
+    t3.changed_object_type,
+    t3.description,
+    t3.modify_time
+FROM
+    state51__Base t2,
+    state51__Change t3
+WHERE
+    t2.id = t3.id           AND
+    (t3.changed_object = 6674362)
+ORDER BY
+    t2.create_time DESC
+</div></td></tr>
+<tr><td>(eval 676)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>19</td> <td id="time">52.374</td> <td id="time">2.75653</td> <td id="time">39.931</td> <td id="rows">76</td> <td id="rows">4</td> <td id="rows">4</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.name,
+    t3.modify_time,
+    t3.collective,
+    t3.collective_type,
+    t4.slot
+FROM
+    state51__Base t2,
+    state51__Authority t3,
+    state51__Role__authorities t4
+WHERE
+    t2.id = t3.id           AND
+    t2._type IN (58, 59)    AND
+    t4.coll = 1645988 AND t4.item = t2.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Use.pm#L962>Use</a></td> <td>962</td> <td>state51::Base::insert </td> <td>12</td> <td id="time">2.282</td> <td id="time">0.190167</td> <td id="time">0.339</td> <td id="rows">4</td> <td id="rows">0.333333</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">UPDATE Tangram SET mark = LAST_INSERT_ID(mark + 1)</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Relationship/Limited.pm#L92>Relationship/Limited</a></td> <td>92</td> <td>state51::Base::insert </td> <td>10</td> <td id="time">44.296</td> <td id="time">4.4296</td> <td id="time">29.938</td> <td id="rows">4</td> <td id="rows">0.4</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">UPDATE Tangram SET mark = LAST_INSERT_ID(mark + 1)</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/encoding_to_transform.pm#L8>encoding_to_transform</a></td> <td>8</td> <td>state51::Base::fetch_whole_class </td> <td>9</td> <td id="time">1101.35</td> <td id="time">122.373</td> <td id="time">1080.19</td> <td id="rows">3348</td> <td id="rows">372</td> <td id="rows">372</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.include_packshot_in_encode,
+    t3.include_metadata_in_encode,
+    t3.bitrate,
+    t3.preview_length,
+    t3.source,
+    t3.source_type,
+    t3.result_mime_minor,
+    t3.codec,
+    t3.channels,
+    t3.name,
+    t3.result_file_extension,
+    t3.family_options,
+    t3.description,
+    t3.family,
+    t3.modify_time
+FROM
+    state51__Base t2,
+    state51__Encoding t3
+WHERE
+    t2.id = t3.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Encoding.pm#L58>Encoding</a></td> <td>58</td> <td>state51::Base::friends </td> <td>9</td> <td id="time">54.292</td> <td id="time">6.03244</td> <td id="time">24.367</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t5.id,
+    t5._type,
+    t5.create_time,
+    t6.auto,
+    t6.priority,
+    t6.sticky_position,
+    t6.average_rating,
+    t6.added,
+    t6.updated,
+    t6.status,
+    t6.target,
+    t6.target_type,
+    t6.entry,
+    t6.entry_type,
+    t6.role,
+    t6.role_type,
+    t6.modify_time
+FROM
+    state51__Base t5,
+    state51__TargetEntry t6
+WHERE
+    t5.id = t6.id           AND
+    (t6.entry = 6674362)
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Encoding.pm#L67>Encoding</a></td> <td>67</td> <td>state51::Base::fetch </td> <td>7</td> <td id="time">880.333</td> <td id="time">125.762</td> <td id="time">875.295</td> <td id="rows">115</td> <td id="rows">16.4286</td> <td id="rows">4</td> <td id="query"><p></p><div class="toggle">SELECT
+    t5.id,
+    t5._type,
+    t5.create_time,
+    t6.organisation,
+    t6.organisation_type,
+    t6.email,
+    t6.identifier,
+    t6.domain,
+    t6.name,
+    t6.modify_time,
+    t6.test_genre_mappings,
+    t6.check_retail_licensor_any_terr,
+    t6.check_barcode_available,
+    t6.check_genre_available,
+    t6.check_retail_licensor_my_terr,
+    t6.check_not_already_exported,
+    t6.check_data_complete,
+    t6.check_deliver_desire,
+    t6.expects_config_file,
+    t6.conspiracy_priority,
+    t6.default_batch_size,
+    t6.ci_priority,
+    t6.support_delivery_without_media,
+    t6.support_multiple_price_bands,
+    t6.support_pre_order_release_date,
+    t6.development_status,
+    t6.support_per_track_price_band,
+    t6.support_licensed_export,
+    t6.delivery_hosts_conspiracy,
+    t6.default_transport_ci,
+    t6.export_path,
+    t6.email_completion_report_conspiracy_to,
+    t6.working_path,
+    t6.delivery_hosts_ci,
+    t6.default_transport_conspiracy,
+    t6.tla,
+    t6.musicservice_class,
+    t6.email_completion_report_ci_to,
+    t6.quoter,
+    t6.quoter_type
+FROM
+    state51__Base t5,
+    state51__OrganisationAttribute t6,
+    state51__MusicService__Encodes tl1003
+WHERE
+    t5.id = t6.id           AND
+    t5._type IN (156, 188, 198)    AND
+    (tl1003.coll = t5.id AND tl1003.item IN (6674362))
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Encoding.pm#L68>Encoding</a></td> <td>68</td> <td>state51::Base::fetch </td> <td>7</td> <td id="time">210.484</td> <td id="time">30.0691</td> <td id="time">192.262</td> <td id="rows">12</td> <td id="rows">1.71429</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.organisation,
+    t3.organisation_type,
+    t3.email,
+    t3.identifier,
+    t3.domain,
+    t3.name,
+    t3.modify_time,
+    t3.test_genre_mappings,
+    t3.check_retail_licensor_any_terr,
+    t3.check_barcode_available,
+    t3.check_genre_available,
+    t3.check_retail_licensor_my_terr,
+    t3.check_not_already_exported,
+    t3.check_data_complete,
+    t3.check_deliver_desire,
+    t3.expects_config_file,
+    t3.conspiracy_priority,
+    t3.default_batch_size,
+    t3.ci_priority,
+    t3.support_delivery_without_media,
+    t3.support_multiple_price_bands,
+    t3.support_pre_order_release_date,
+    t3.development_status,
+    t3.support_per_track_price_band,
+    t3.support_licensed_export,
+    t3.delivery_hosts_conspiracy,
+    t3.default_transport_ci,
+    t3.export_path,
+    t3.email_completion_report_conspiracy_to,
+    t3.working_path,
+    t3.delivery_hosts_ci,
+    t3.default_transport_conspiracy,
+    t3.tla,
+    t3.musicservice_class,
+    t3.email_completion_report_ci_to,
+    t3.quoter,
+    t3.quoter_type
+FROM
+    state51__Base t2,
+    state51__OrganisationAttribute t3,
+    state51__MusicService__Encodes tl1003
+WHERE
+    t2.id = t3.id           AND
+    t2._type IN (156, 188, 198)    AND
+    (tl1003.coll = t2.id AND tl1003.item IN (1))
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/ReleaseFormat.pm#L239>ReleaseFormat</a></td> <td>239</td> <td>state51::Base::update </td> <td>6</td> <td id="time">1.931</td> <td id="time">0.321833</td> <td id="time">0.602</td> <td id="rows">2</td> <td id="rows">0.333333</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">UPDATE
+    state51__Album
+SET
+    `packshot` = '104514886',
+    `packshot_type` = '0054',
+    `identifier_unique` = NULL,
+    `meta_modify_time` = NULL,
+    `released` = '2009-05-26 00:00:00',
+    `explicit_content` = 'yes',
+    `status` = 'live',
+    `source` = '20182459',
+    `source_type` = '0009',
+    `parent` = NULL,
+    `parent_type` = NULL,
+    `sound_carrier` = '5842330',
+    `sound_carrier_type` = '0180',
+    `release` = '104411057',
+    `release_type` = '0069',
+    `identifier_string` = 'the-clean-up-man-file',
+    `ASIN` = NULL,
+    `title` = 'The Clean Up Man',
+    `barcode` = '810523013810',
+    `additional_identifier` = '',
+    `catalog_no` = 'C1001',
+    `modify_time` = '2009-06-04 11:44:17',
+    `identifier` = 'the-clean-up-man-file',
+    `promo` = '0',
+    `multivolume_format` = NULL,
+    `duration` = NULL,
+    `volume_total_parts` = '1',
+    `volume_part` = '1',
+    `track_count` = '21',
+    `meta_valid_time` = '2009-06-04 11:44:17',
+    `price_band` = 'full',
+    `product_status` = 'Available',
+    `import_status` = 'live',
+    `media_type` = 'File',
+    `format_type` = 'Album',
+    `musicset` = '21364914',
+    `musicset_type` = '0216',
+    `authorship` = NULL,
+    `authorship_type` = NULL,
+    `music_package` = '5842808',
+    `music_package_type` = '0181',
+    `to_fulfil` = '104311162',
+    `to_fulfil_type` = '0192',
+    `asset_controller` = '20182260',
+    `asset_controller_type` = '0016',
+    `label` = '29917873',
+    `label_type` = '0094',
+    `encoding` = '6377316',
+    `encoding_type` = '0174',
+    `display_artist` = '',
+    `p_copy` = '2009 Howie McDuffie Music Group',
+    `display_author` = NULL,
+    `version_description` = '',
+    `c_copy` = '2009 Howie McDuffie Music Group',
+    `toc_starts` = NULL,
+    `grid` = '',
+    `toc_tracks` = NULL,
+    `description` = NULL,
+    `import_notes` = 'imported by victor from file SEED_FL20090503200440.xls on Wed May  6 15:52:17 2009 with a command line of << -l s51v4xls -i seed -s seed Media Catalogue -u -n SEED_FL20090503200440.xls -a -f -m -o import-seed-70\n >>',
+    `toc_lengths` = '13574,13693,17695,19830,6652,18870,17667,17001,15135,17868,15220,11801,12402,10466,15888,15332,9512,18313,18141,10465,13482'
+WHERE
+    id = '104411058'</div></td></tr>
+<tr><td>(eval 1995)</td> <td>1</td> <td>Tangram::RefOnDemand::FETCH </td> <td>6</td> <td id="time">2.347</td> <td id="time">0.391167</td> <td id="time">0.441</td> <td id="rows">6</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__Organisation.logo,
+    state51__Organisation.logo_type,
+    state51__Organisation.ended,
+    state51__Organisation.began,
+    state51__Organisation.status,
+    state51__Organisation.source,
+    state51__Organisation.source_type,
+    state51__Organisation.media_catalogue,
+    state51__Organisation.media_catalogue_type,
+    state51__Organisation.town,
+    state51__Organisation.town_type,
+    state51__Organisation.DPID,
+    state51__Organisation.paypal_email,
+    state51__Organisation.name,
+    state51__Organisation.phone,
+    state51__Organisation.email,
+    state51__Organisation.identifier,
+    state51__Organisation.email_delivery_report_to,
+    state51__Organisation.fax,
+    state51__Organisation.postcode,
+    state51__Organisation.email_accounts_to,
+    state51__Organisation.modify_time,
+    state51__Organisation.profile,
+    state51__Organisation.notes,
+    state51__Organisation.addr,
+    state51__Organisation.country,
+    state51__Organisation.country_type
+FROM
+    state51__Base,
+    state51__Organisation
+WHERE
+    state51__Base.id = '3143627'	AND
+    state51__Base.id = state51__Organisation.id</div></td></tr>
+<tr><td>/space/templates/Ed/view/View/view.html</td> <td>90</td> <td>state51::Base::friends </td> <td>6</td> <td id="time">14.905</td> <td id="time">2.48417</td> <td id="time">10.928</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t8.id,
+    t8._type,
+    t8.create_time,
+    t9.auto,
+    t9.priority,
+    t9.sticky_position,
+    t9.average_rating,
+    t9.added,
+    t9.updated,
+    t9.status,
+    t9.target,
+    t9.target_type,
+    t9.entry,
+    t9.entry_type,
+    t9.role,
+    t9.role_type,
+    t9.modify_time
+FROM
+    state51__Base t8,
+    state51__TargetEntry t9
+WHERE
+    t8.id = t9.id           AND
+    (t9.entry = 95950511)
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/View/Ed/Base.pm#L660>View/Ed/Base</a></td> <td>660</td> <td>state51::Base::insert </td> <td>5</td> <td id="time">92.419</td> <td id="time">18.4838</td> <td id="time">64.51</td> <td id="rows">2</td> <td id="rows">0.4</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">UPDATE Tangram SET mark = LAST_INSERT_ID(mark + 1)</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/encoding_to_transform.pm#L8>encoding_to_transform</a></td> <td>8</td> <td>state51::Base::load </td> <td>5</td> <td id="time">1.577</td> <td id="time">0.3154</td> <td id="time">0.386</td> <td id="rows">5</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__Encoding.include_packshot_in_encode,
+    state51__Encoding.include_metadata_in_encode,
+    state51__Encoding.bitrate,
+    state51__Encoding.preview_length,
+    state51__Encoding.source,
+    state51__Encoding.source_type,
+    state51__Encoding.result_mime_minor,
+    state51__Encoding.codec,
+    state51__Encoding.channels,
+    state51__Encoding.name,
+    state51__Encoding.result_file_extension,
+    state51__Encoding.family_options,
+    state51__Encoding.description,
+    state51__Encoding.family,
+    state51__Encoding.modify_time
+FROM
+    state51__Base,
+    state51__Encoding
+WHERE
+    state51__Base.id = '6377316'	AND
+    state51__Base.id = state51__Encoding.id</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/encoding_to_transform.pm#L10>encoding_to_transform</a></td> <td>10</td> <td>state51::Base::fetch_whole_class </td> <td>5</td> <td id="time">8.587</td> <td id="time">1.7174</td> <td id="time">3.868</td> <td id="rows">1860</td> <td id="rows">372</td> <td id="rows">372</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.include_packshot_in_encode,
+    t3.include_metadata_in_encode,
+    t3.bitrate,
+    t3.preview_length,
+    t3.source,
+    t3.source_type,
+    t3.result_mime_minor,
+    t3.codec,
+    t3.channels,
+    t3.name,
+    t3.result_file_extension,
+    t3.family_options,
+    t3.description,
+    t3.family,
+    t3.modify_time
+FROM
+    state51__Base t2,
+    state51__Encoding t3
+WHERE
+    t2.id = t3.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/View/Ed/Base.pm#L454>View/Ed/Base</a></td> <td>454</td> <td>state51::Base::insert </td> <td>5</td> <td id="time">0.917</td> <td id="time">0.1834</td> <td id="time">0.434</td> <td id="rows">2</td> <td id="rows">0.4</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">UPDATE Tangram SET mark = LAST_INSERT_ID(mark + 1)</div></td></tr>
+<tr><td>(eval 3090)</td> <td>1</td> <td>Tangram::RefOnDemand::FETCH </td> <td>4</td> <td id="time">1.366</td> <td id="time">0.3415</td> <td id="time">0.405</td> <td id="rows">4</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__Encoding.include_packshot_in_encode,
+    state51__Encoding.include_metadata_in_encode,
+    state51__Encoding.bitrate,
+    state51__Encoding.preview_length,
+    state51__Encoding.source,
+    state51__Encoding.source_type,
+    state51__Encoding.result_mime_minor,
+    state51__Encoding.codec,
+    state51__Encoding.channels,
+    state51__Encoding.name,
+    state51__Encoding.result_file_extension,
+    state51__Encoding.family_options,
+    state51__Encoding.description,
+    state51__Encoding.family,
+    state51__Encoding.modify_time
+FROM
+    state51__Base,
+    state51__Encoding
+WHERE
+    state51__Base.id = '6377316'	AND
+    state51__Base.id = state51__Encoding.id</div></td></tr>
+<tr><td>(eval 1785)</td> <td>1</td> <td>Tangram::RefOnDemand::FETCH </td> <td>3</td> <td id="time">22.509</td> <td id="time">7.503</td> <td id="time">21.726</td> <td id="rows">3</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__Encoding.include_packshot_in_encode,
+    state51__Encoding.include_metadata_in_encode,
+    state51__Encoding.bitrate,
+    state51__Encoding.preview_length,
+    state51__Encoding.source,
+    state51__Encoding.source_type,
+    state51__Encoding.result_mime_minor,
+    state51__Encoding.codec,
+    state51__Encoding.channels,
+    state51__Encoding.name,
+    state51__Encoding.result_file_extension,
+    state51__Encoding.family_options,
+    state51__Encoding.description,
+    state51__Encoding.family,
+    state51__Encoding.modify_time
+FROM
+    state51__Base,
+    state51__Encoding
+WHERE
+    state51__Base.id = '63018743'	AND
+    state51__Base.id = state51__Encoding.id</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/MusicService.pm#L470>MusicService</a></td> <td>470</td> <td>state51::Base::fetch </td> <td>2</td> <td id="time">8.416</td> <td id="time">4.208</td> <td id="time">4.22</td> <td id="rows">42</td> <td id="rows">21</td> <td id="rows">21</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.filesize,
+    t3.stored,
+    t3.uploader_ip,
+    t3.identifier_unique,
+    t3.crc32,
+    t3.subject_date,
+    t3.asset_controller,
+    t3.asset_controller_type,
+    t3.status,
+    t3.source,
+    t3.source_type,
+    t3.mime_major,
+    t3.extension,
+    t3.credit,
+    t3.secret,
+    t3.directory,
+    t3.identifier,
+    t3.caption,
+    t3.identifier_string,
+    t3.mime_minor,
+    t3.digest,
+    t3.search_tags,
+    t3.modify_time,
+    t3.creator,
+    t3.creator_type,
+    t3.description,
+    t3.incomplete,
+    t3.track,
+    t3.track_type,
+    t3.recording,
+    t3.recording_type,
+    t3.encoding,
+    t3.encoding_type,
+    t3.length,
+    t3.bitrate,
+    t3.channels
+FROM
+    state51__Base t2,
+    state51__File t3,
+    state51__File__Audio__tracks tl1001
+WHERE
+    t2.id = t3.id           AND
+    t2._type = 33           AND
+    (t3.extension = 'wav' AND tl1001.coll = t2.id AND tl1001.item IN (104411061,104411065,104411069,104411094,104411122,104411131,104411153,104411184,104411345,104411376,104411384,104411406,104411420,104411428,104411438,104411446,104411454,104411465,104411474,104411497,104411522))
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/FileTransform.pm#L22>FileTransform</a></td> <td>22</td> <td>Tangram::RefOnDemand::FETCH </td> <td>2</td> <td id="time">140.52</td> <td id="time">70.26</td> <td id="time">78.393</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__File.filesize,
+    state51__File.stored,
+    state51__File.uploader_ip,
+    state51__File.identifier_unique,
+    state51__File.crc32,
+    state51__File.subject_date,
+    state51__File.asset_controller,
+    state51__File.asset_controller_type,
+    state51__File.status,
+    state51__File.source,
+    state51__File.source_type,
+    state51__File.mime_major,
+    state51__File.extension,
+    state51__File.credit,
+    state51__File.secret,
+    state51__File.directory,
+    state51__File.identifier,
+    state51__File.caption,
+    state51__File.identifier_string,
+    state51__File.mime_minor,
+    state51__File.digest,
+    state51__File.search_tags,
+    state51__File.modify_time,
+    state51__File.creator,
+    state51__File.creator_type,
+    state51__File.description,
+    state51__File.incomplete,
+    state51__File.track,
+    state51__File.track_type,
+    state51__File.recording,
+    state51__File.recording_type,
+    state51__File.encoding,
+    state51__File.encoding_type,
+    state51__File.length,
+    state51__File.bitrate,
+    state51__File.channels
+FROM
+    state51__Base,
+    state51__File
+WHERE
+    state51__Base.id = '6950036'	AND
+    state51__Base.id = state51__File.id</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/MusicService.pm#L474>MusicService</a></td> <td>474</td> <td>state51::Base::fetch </td> <td>2</td> <td id="time">7.925</td> <td id="time">3.9625</td> <td id="time">4.032</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.filesize,
+    t3.stored,
+    t3.uploader_ip,
+    t3.identifier_unique,
+    t3.crc32,
+    t3.subject_date,
+    t3.asset_controller,
+    t3.asset_controller_type,
+    t3.status,
+    t3.source,
+    t3.source_type,
+    t3.mime_major,
+    t3.extension,
+    t3.credit,
+    t3.secret,
+    t3.directory,
+    t3.identifier,
+    t3.caption,
+    t3.identifier_string,
+    t3.mime_minor,
+    t3.digest,
+    t3.search_tags,
+    t3.modify_time,
+    t3.creator,
+    t3.creator_type,
+    t3.description,
+    t3.incomplete,
+    t3.width,
+    t3.height,
+    t3.recording,
+    t3.recording_type,
+    t3.subtitle_language,
+    t3.subtitle_language_type,
+    t3.encoding,
+    t3.encoding_type,
+    t3.length,
+    t3.bitrate
+FROM
+    state51__Base t2,
+    state51__File t3,
+    state51__File__Audio__tracks tl1002
+WHERE
+    t2.id = t3.id           AND
+    t2._type = 127          AND
+    (t3.extension = 'mpg' AND tl1002.coll = t2.id AND tl1002.item IN (104411061,104411065,104411069,104411094,104411122,104411131,104411153,104411184,104411345,104411376,104411384,104411406,104411420,104411428,104411438,104411446,104411454,104411465,104411474,104411497,104411522))
+</div></td></tr>
+<tr><td>(eval 2379)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>2</td> <td id="time">0.718</td> <td id="time">0.359</td> <td id="time">0.447</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.clean,
+    t3.musicbrainz_id,
+    t3.status,
+    t3.email,
+    t3.name,
+    t3.also_match,
+    t3.modify_time,
+    t3.identifier,
+    t3.profile,
+    t4.slot
+FROM
+    state51__Base t2,
+    state51__Artist t3,
+    state51__Album_Artist t4
+WHERE
+    t2.id = t3.id           AND
+    t4.coll = 104411058 AND t4.item = t2.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/SQLHacks.pm#L26>SQLHacks</a></td> <td>26</td> <td>state51::Tangram::Driver::mysql::Storage::__ANON__ </td> <td>2</td> <td id="time">0.455</td> <td id="time">0.2275</td> <td id="time">0.236</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">select last_sync from Tangram</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Use.pm#L771>Use</a></td> <td>771</td> <td>state51::Base::fetch </td> <td>2</td> <td id="time">5.389</td> <td id="time">2.6945</td> <td id="time">2.761</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.status,
+    t3.type,
+    t3.updates,
+    t3.updates_type,
+    t3.party,
+    t3.party_type,
+    t3.asset,
+    t3.asset_type,
+    t3.modify_time
+FROM
+    state51__Base t2,
+    state51__Use t3
+WHERE
+    t2.id = t3.id           AND
+    t2._type = 225          AND
+    (t3.status = 'live' AND t3.type = 'make_available' AND t3.asset = 104411058)
+</div></td></tr>
+<tr><td>(eval 2398)</td> <td>1</td> <td>Tangram::RefOnDemand::FETCH </td> <td>2</td> <td id="time">53.468</td> <td id="time">26.734</td> <td id="time">30.582</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__Organisation.logo,
+    state51__Organisation.logo_type,
+    state51__Organisation.ended,
+    state51__Organisation.began,
+    state51__Organisation.status,
+    state51__Organisation.source,
+    state51__Organisation.source_type,
+    state51__Organisation.media_catalogue,
+    state51__Organisation.media_catalogue_type,
+    state51__Organisation.town,
+    state51__Organisation.town_type,
+    state51__Organisation.DPID,
+    state51__Organisation.paypal_email,
+    state51__Organisation.name,
+    state51__Organisation.phone,
+    state51__Organisation.email,
+    state51__Organisation.identifier,
+    state51__Organisation.email_delivery_report_to,
+    state51__Organisation.fax,
+    state51__Organisation.postcode,
+    state51__Organisation.email_accounts_to,
+    state51__Organisation.modify_time,
+    state51__Organisation.profile,
+    state51__Organisation.notes,
+    state51__Organisation.addr,
+    state51__Organisation.country,
+    state51__Organisation.country_type
+FROM
+    state51__Base,
+    state51__Organisation
+WHERE
+    state51__Base.id = '57753805'	AND
+    state51__Base.id = state51__Organisation.id</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/test_itms_meta.pm#L19>test_itms_meta</a></td> <td>19</td> <td>state51::Base::load </td> <td>2</td> <td id="time">1.113</td> <td id="time">0.5565</td> <td id="time">0.603</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__Album.packshot,
+    state51__Album.packshot_type,
+    state51__Album.identifier_unique,
+    state51__Album.meta_modify_time,
+    state51__Album.released,
+    state51__Album.explicit_content,
+    state51__Album.status,
+    state51__Album.source,
+    state51__Album.source_type,
+    state51__Album.parent,
+    state51__Album.parent_type,
+    state51__Album.sound_carrier,
+    state51__Album.sound_carrier_type,
+    state51__Album.release,
+    state51__Album.release_type,
+    state51__Album.identifier_string,
+    state51__Album.ASIN,
+    state51__Album.title,
+    state51__Album.barcode,
+    state51__Album.additional_identifier,
+    state51__Album.catalog_no,
+    state51__Album.modify_time,
+    state51__Album.identifier,
+    state51__Album.promo,
+    state51__Album.multivolume_format,
+    state51__Album.duration,
+    state51__Album.volume_total_parts,
+    state51__Album.volume_part,
+    state51__Album.track_count,
+    state51__Album.meta_valid_time,
+    state51__Album.price_band,
+    state51__Album.product_status,
+    state51__Album.import_status,
+    state51__Album.media_type,
+    state51__Album.format_type,
+    state51__Album.musicset,
+    state51__Album.musicset_type,
+    state51__Album.authorship,
+    state51__Album.authorship_type,
+    state51__Album.music_package,
+    state51__Album.music_package_type,
+    state51__Album.to_fulfil,
+    state51__Album.to_fulfil_type,
+    state51__Album.asset_controller,
+    state51__Album.asset_controller_type,
+    state51__Album.label,
+    state51__Album.label_type,
+    state51__Album.encoding,
+    state51__Album.encoding_type,
+    state51__Album.display_artist,
+    state51__Album.p_copy,
+    state51__Album.display_author,
+    state51__Album.version_description,
+    state51__Album.c_copy,
+    state51__Album.toc_starts,
+    state51__Album.grid,
+    state51__Album.toc_tracks,
+    state51__Album.description,
+    state51__Album.import_notes,
+    state51__Album.toc_lengths
+FROM
+    state51__Base,
+    state51__Album
+WHERE
+    state51__Base.id = '104411058'	AND
+    state51__Base.id = state51__Album.id</div></td></tr>
+<tr><td>(eval 2695)</td> <td>1</td> <td>Tangram::RefOnDemand::FETCH </td> <td>2</td> <td id="time">0.668</td> <td id="time">0.334</td> <td id="time">0.342</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__OrganisationAttribute.organisation,
+    state51__OrganisationAttribute.organisation_type,
+    state51__OrganisationAttribute.email,
+    state51__OrganisationAttribute.identifier,
+    state51__OrganisationAttribute.domain,
+    state51__OrganisationAttribute.name,
+    state51__OrganisationAttribute.modify_time,
+    state51__OrganisationAttribute.label_code
+FROM
+    state51__Base,
+    state51__OrganisationAttribute
+WHERE
+    state51__Base.id = '29917873'	AND
+    state51__Base.id = state51__OrganisationAttribute.id</div></td></tr>
+<tr><td>(eval 2696)</td> <td>1</td> <td>Tangram::RefOnDemand::FETCH </td> <td>2</td> <td id="time">0.685</td> <td id="time">0.3425</td> <td id="time">0.372</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__MusicSet.identifier,
+    state51__MusicSet.identifier_unique,
+    state51__MusicSet.source,
+    state51__MusicSet.source_type,
+    state51__MusicSet.identifier_string,
+    state51__MusicSet.primary_main,
+    state51__MusicSet.alternate_main,
+    state51__MusicSet.primary_sub,
+    state51__MusicSet.alternate_sub,
+    state51__MusicSet.modify_time
+FROM
+    state51__Base,
+    state51__MusicSet
+WHERE
+    state51__Base.id = '21364914'	AND
+    state51__Base.id = state51__MusicSet.id</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/MusicService.pm#L87>MusicService</a></td> <td>87</td> <td>state51::Base::fetch </td> <td>2</td> <td id="time">1.207</td> <td id="time">0.6035</td> <td id="time">0.686</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.organisation,
+    t3.organisation_type,
+    t3.email,
+    t3.identifier,
+    t3.domain,
+    t3.name,
+    t3.modify_time,
+    t3.test_genre_mappings,
+    t3.check_retail_licensor_any_terr,
+    t3.check_barcode_available,
+    t3.check_genre_available,
+    t3.check_retail_licensor_my_terr,
+    t3.check_not_already_exported,
+    t3.check_data_complete,
+    t3.check_deliver_desire,
+    t3.expects_config_file,
+    t3.conspiracy_priority,
+    t3.default_batch_size,
+    t3.ci_priority,
+    t3.support_delivery_without_media,
+    t3.support_multiple_price_bands,
+    t3.support_pre_order_release_date,
+    t3.development_status,
+    t3.support_per_track_price_band,
+    t3.support_licensed_export,
+    t3.delivery_hosts_conspiracy,
+    t3.default_transport_ci,
+    t3.export_path,
+    t3.email_completion_report_conspiracy_to,
+    t3.working_path,
+    t3.delivery_hosts_ci,
+    t3.default_transport_conspiracy,
+    t3.tla,
+    t3.musicservice_class,
+    t3.email_completion_report_ci_to,
+    t3.quoter,
+    t3.quoter_type
+FROM
+    state51__Base t2,
+    state51__OrganisationAttribute t3
+WHERE
+    t2.id = t3.id           AND
+    t2._type IN (156, 188, 198)    AND
+    (t3.name = 'iTunes Music Store')
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/MusicService.pm#L390>MusicService</a></td> <td>390</td> <td>state51::Base::fetch </td> <td>2</td> <td id="time">1.241</td> <td id="time">0.6205</td> <td id="time">0.64</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t5.id,
+    t5._type,
+    t5.create_time,
+    t6.type,
+    t6.request,
+    t6.request_type,
+    t6.entity,
+    t6.entity_type,
+    t6.asset,
+    t6.asset_type,
+    t6.modify_time,
+    t6.claim_worldwide,
+    t6.world,
+    t6.ended,
+    t6.began,
+    t6.pre_order_release_date,
+    t6.price_band,
+    t6.country_list,
+    t6.ownership_split
+FROM
+    state51__Base t5,
+    state51__Relationship t6
+WHERE
+    t5.id = t6.id           AND
+    t5._type IN (101, 102, 103)    AND
+    (t6.type = 'RetailLicensor' AND t6.asset = 104411058)
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Use.pm#L1148>Use</a></td> <td>1148</td> <td>state51::Base::fetch </td> <td>2</td> <td id="time">0.801</td> <td id="time">0.4005</td> <td id="time">0.41</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t5.id,
+    t5._type,
+    t5.create_time,
+    t6.distribution_channel_type,
+    t6.musicservice,
+    t6.musicservice_type,
+    t6.modify_time
+FROM
+    state51__Base t5,
+    state51__UseCondition t6
+WHERE
+    t5.id = t6.id           AND
+    (t6.musicservice = 3143598 AND t6.distribution_channel_type IS NULL)
+</div></td></tr>
+<tr><td>(eval 2003)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>2</td> <td id="time">0.727</td> <td id="time">0.3635</td> <td id="time">0.441</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.include_packshot_in_encode,
+    t3.include_metadata_in_encode,
+    t3.bitrate,
+    t3.preview_length,
+    t3.source,
+    t3.source_type,
+    t3.result_mime_minor,
+    t3.codec,
+    t3.channels,
+    t3.name,
+    t3.result_file_extension,
+    t3.family_options,
+    t3.description,
+    t3.family,
+    t3.modify_time,
+    t4.slot
+FROM
+    state51__Base t2,
+    state51__Encoding t3,
+    state51__MusicService__Encodes t4
+WHERE
+    t2.id = t3.id           AND
+    t4.coll = 3143598 AND t4.item = t2.id
+</div></td></tr>
+<tr><td>(eval 2367)</td> <td>1</td> <td>Tangram::RefOnDemand::FETCH </td> <td>2</td> <td id="time">0.58</td> <td id="time">0.29</td> <td id="time">0.356</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__Source.voucher_required,
+    state51__Source.notify_email,
+    state51__Source.name,
+    state51__Source.modify_time
+FROM
+    state51__Base,
+    state51__Source
+WHERE
+    state51__Base.id = '20182459'	AND
+    state51__Base.id = state51__Source.id</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/ReleaseFormat.pm#L2229>ReleaseFormat</a></td> <td>2229</td> <td>Tangram::RefOnDemand::FETCH </td> <td>2</td> <td id="time">0.822</td> <td id="time">0.411</td> <td id="time">0.427</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__File.filesize,
+    state51__File.stored,
+    state51__File.uploader_ip,
+    state51__File.identifier_unique,
+    state51__File.crc32,
+    state51__File.subject_date,
+    state51__File.asset_controller,
+    state51__File.asset_controller_type,
+    state51__File.status,
+    state51__File.source,
+    state51__File.source_type,
+    state51__File.mime_major,
+    state51__File.extension,
+    state51__File.credit,
+    state51__File.secret,
+    state51__File.directory,
+    state51__File.identifier,
+    state51__File.caption,
+    state51__File.identifier_string,
+    state51__File.mime_minor,
+    state51__File.digest,
+    state51__File.search_tags,
+    state51__File.modify_time,
+    state51__File.creator,
+    state51__File.creator_type,
+    state51__File.description,
+    state51__File.width,
+    state51__File.height
+FROM
+    state51__Base,
+    state51__File
+WHERE
+    state51__Base.id = '104514886'	AND
+    state51__Base.id = state51__File.id</div></td></tr>
+<tr><td>(eval 610)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>2</td> <td id="time">130.69</td> <td id="time">65.345</td> <td id="time">81.306</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t5.id,
+    t5._type,
+    t5.create_time,
+    t6.name,
+    t6.modify_time,
+    t7.slot
+FROM
+    state51__Base t5,
+    state51__OrgType t6,
+    state51__Organisation__OrgType t7
+WHERE
+    t5.id = t6.id           AND
+    t7.coll = 57753805 AND t7.item = t5.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/test_itms_meta.pm#L27>test_itms_meta</a></td> <td>27</td> <td>state51::Base::load </td> <td>2</td> <td id="time">15.32</td> <td id="time">7.66</td> <td id="time">15.086</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__Request.identifier_unique,
+    state51__Request.notes,
+    state51__Request.status,
+    state51__Request.source,
+    state51__Request.source_type,
+    state51__Request.organisation,
+    state51__Request.organisation_type,
+    state51__Request.handler,
+    state51__Request.handler_type,
+    state51__Request.creator,
+    state51__Request.creator_type,
+    state51__Request.identifier,
+    state51__Request.identifier_string,
+    state51__Request.external_id,
+    state51__Request.contact_email,
+    state51__Request.name,
+    state51__Request.modify_time,
+    state51__Request.number_of_products,
+    state51__Request.number_of_tracks,
+    state51__Request.requested_target_date,
+    state51__Request.priority,
+    state51__Request.task
+FROM
+    state51__Base,
+    state51__Request
+WHERE
+    state51__Base.id = '19093281'	AND
+    state51__Base.id = state51__Request.id</div></td></tr>
+<tr><td>(eval 2689)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>2</td> <td id="time">1.024</td> <td id="time">0.512</td> <td id="time">0.568</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.value,
+    t3.modify_time,
+    t4.slot
+FROM
+    state51__Base t2,
+    state51__Identifier t3,
+    state51__Format__identifiers t4
+WHERE
+    t2.id = t3.id           AND
+    t2._type IN (246, 247, 260, 267, 258)    AND
+    t4.coll = 104411058 AND t4.item = t2.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/MusicService/ITMS.pm#L128>MusicService/ITMS</a></td> <td>128</td> <td>state51::Base::fetch </td> <td>2</td> <td id="time">1.721</td> <td id="time">0.8605</td> <td id="time">0.981</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t5.id,
+    t5._type,
+    t5.create_time,
+    t6.packshot,
+    t6.packshot_type,
+    t6.identifier_unique,
+    t6.meta_modify_time,
+    t6.released,
+    t6.explicit_content,
+    t6.status,
+    t6.source,
+    t6.source_type,
+    t6.parent,
+    t6.parent_type,
+    t6.sound_carrier,
+    t6.sound_carrier_type,
+    t6.release,
+    t6.release_type,
+    t6.identifier_string,
+    t6.ASIN,
+    t6.title,
+    t6.barcode,
+    t6.additional_identifier,
+    t6.catalog_no,
+    t6.modify_time,
+    t6.identifier,
+    t6.promo,
+    t6.multivolume_format,
+    t6.duration,
+    t6.volume_total_parts,
+    t6.volume_part,
+    t6.track_count,
+    t6.meta_valid_time,
+    t6.price_band,
+    t6.product_status,
+    t6.import_status,
+    t6.media_type,
+    t6.format_type,
+    t6.musicset,
+    t6.musicset_type,
+    t6.authorship,
+    t6.authorship_type,
+    t6.music_package,
+    t6.music_package_type,
+    t6.to_fulfil,
+    t6.to_fulfil_type,
+    t6.asset_controller,
+    t6.asset_controller_type,
+    t6.label,
+    t6.label_type,
+    t6.encoding,
+    t6.encoding_type,
+    t6.display_artist,
+    t6.p_copy,
+    t6.display_author,
+    t6.version_description,
+    t6.c_copy,
+    t6.toc_starts,
+    t6.grid,
+    t6.toc_tracks,
+    t6.description,
+    t6.import_notes,
+    t6.toc_lengths
+FROM
+    state51__Base t5,
+    state51__Album t6
+WHERE
+    t5.id = t6.id           AND
+    t5._type = 32           AND
+    (t6.source = 20182459 AND t6.status = 'live' AND t6.barcode = '810523013810')
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Relationship/Limited.pm#L66>Relationship/Limited</a></td> <td>66</td> <td>Tangram::CollOnDemand::FETCH </td> <td>2</td> <td id="time">0.999</td> <td id="time">0.4995</td> <td id="time">0.591</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t8.id,
+    t8._type,
+    t8.create_time,
+    t9.population,
+    t9.dms_lat,
+    t9.gns_ufi,
+    t9.dms_long,
+    t9.identifier_unique,
+    t9.height,
+    t9.source,
+    t9.source_type,
+    t9.subcountry,
+    t9.subcountry_type,
+    t9.descriptor,
+    t9.descriptor_type,
+    t9.region,
+    t9.region_type,
+    t9.town,
+    t9.town_type,
+    t9.settlement,
+    t9.settlement_type,
+    t9.feature_id,
+    t9.postal_sort,
+    t9.identifier_string,
+    t9.alternate_names,
+    t9.weathercomid,
+    t9.utm,
+    t9.name,
+    t9.modify_time,
+    t9.identifier,
+    t9.country,
+    t9.country_type,
+    t9.dd_long,
+    t9.dd_lat,
+    t9.validated_regions,
+    t9.has_postcodes,
+    t9.validated_towns,
+    t9.postage_zone,
+    t9.iso_code3,
+    t9.iso_code2,
+    t9.iso_name,
+    t9.timezones,
+    t10.slot
+FROM
+    state51__Base t8,
+    state51__Place t9,
+    state51__Relationship__Country t10
+WHERE
+    t8.id = t9.id           AND
+    t8._type = 22           AND
+    t10.coll = 104514743 AND t10.item = t8.id
+</div></td></tr>
+<tr><td>(eval 2378)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>2</td> <td id="time">1.711</td> <td id="time">0.8555</td> <td id="time">0.91</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.filesize,
+    t3.stored,
+    t3.uploader_ip,
+    t3.identifier_unique,
+    t3.crc32,
+    t3.subject_date,
+    t3.asset_controller,
+    t3.asset_controller_type,
+    t3.status,
+    t3.source,
+    t3.source_type,
+    t3.mime_major,
+    t3.extension,
+    t3.credit,
+    t3.secret,
+    t3.directory,
+    t3.identifier,
+    t3.caption,
+    t3.identifier_string,
+    t3.mime_minor,
+    t3.digest,
+    t3.search_tags,
+    t3.modify_time,
+    t3.creator,
+    t3.creator_type,
+    t3.description,
+    t3.request,
+    t3.request_type,
+    t3.incomplete,
+    t3.width,
+    t3.height,
+    t3.recording,
+    t3.recording_type,
+    t3.subtitle_language,
+    t3.subtitle_language_type,
+    t3.encoding,
+    t3.encoding_type,
+    t3.length,
+    t3.bitrate,
+    t3.track,
+    t3.track_type,
+    t3.channels,
+    t3.track_count,
+    t3.import_status,
+    t3.status_cause,
+    t3.package_id,
+    t3.service_status,
+    t4.slot
+FROM
+    state51__Base t2,
+    state51__File t3,
+    state51__Format__artworks t4
+WHERE
+    t2.id = t3.id           AND
+    t2._type IN (53, 264, 193, 127, 33, 265, 54, 266, 238, 240, 157, 263, 242)    AND
+    t4.coll = 104411058 AND t4.item = t2.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/MusicService.pm#L233>MusicService</a></td> <td>233</td> <td>state51::Base::fetch </td> <td>2</td> <td id="time">0.659</td> <td id="time">0.3295</td> <td id="time">0.34</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.voucher_required,
+    t3.notify_email,
+    t3.name,
+    t3.modify_time
+FROM
+    state51__Base t2,
+    state51__Source t3
+WHERE
+    t2.id = t3.id           AND
+    (t3.name = 'ministry of sound media catalogue')
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/ReleaseFormat.pm#L1248>ReleaseFormat</a></td> <td>1248</td> <td>state51::Base::fetch </td> <td>2</td> <td id="time">1.697</td> <td id="time">0.8485</td> <td id="time">0.864</td> <td id="rows">42</td> <td id="rows">21</td> <td id="rows">21</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.play_gapless,
+    t3.hidden,
+    t3.preview_start_time,
+    t3.volume_part,
+    t3.altered_length,
+    t3.explicit_content,
+    t3.musicset,
+    t3.musicset_type,
+    t3.releaseformat,
+    t3.releaseformat_type,
+    t3.parent,
+    t3.parent_type,
+    t3.recording,
+    t3.recording_type,
+    t3.display_artist,
+    t3.track_number,
+    t3.p_copy,
+    t3.mix_version,
+    t3.c_copy,
+    t3.label_copy,
+    t3.modify_time
+FROM
+    state51__Base t2,
+    state51__Trackv2 t3
+WHERE
+    t2.id = t3.id           AND
+    (t3.releaseformat = 104411058)
+</div></td></tr>
+<tr><td>(eval 2016)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>2</td> <td id="time">0.947</td> <td id="time">0.4735</td> <td id="time">0.509</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t5.id,
+    t5._type,
+    t5.create_time,
+    t6.population,
+    t6.dms_lat,
+    t6.gns_ufi,
+    t6.dms_long,
+    t6.identifier_unique,
+    t6.height,
+    t6.source,
+    t6.source_type,
+    t6.subcountry,
+    t6.subcountry_type,
+    t6.descriptor,
+    t6.descriptor_type,
+    t6.region,
+    t6.region_type,
+    t6.town,
+    t6.town_type,
+    t6.settlement,
+    t6.settlement_type,
+    t6.feature_id,
+    t6.postal_sort,
+    t6.identifier_string,
+    t6.alternate_names,
+    t6.weathercomid,
+    t6.utm,
+    t6.name,
+    t6.modify_time,
+    t6.identifier,
+    t6.country,
+    t6.country_type,
+    t6.dd_long,
+    t6.dd_lat,
+    t6.validated_regions,
+    t6.has_postcodes,
+    t6.validated_towns,
+    t6.postage_zone,
+    t6.iso_code3,
+    t6.iso_code2,
+    t6.iso_name,
+    t6.timezones,
+    t7.slot
+FROM
+    state51__Base t5,
+    state51__Place t6,
+    state51__OrganisationAttribute__MyTerritory t7
+WHERE
+    t5.id = t6.id           AND
+    t5._type = 22           AND
+    t7.coll = 3143598 AND t7.item = t5.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/ReleaseFormat.pm#L910>ReleaseFormat</a></td> <td>910</td> <td>state51::Tangram::Driver::mysql::Storage::select </td> <td>2</td> <td id="time">12.355</td> <td id="time">6.1775</td> <td id="time">10.829</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT DISTINCT
+    t7.id,
+    t7._type,
+    t7.create_time,
+    t8.batch_transferred,
+    t8.batch_is_test,
+    t8.test_already_exported,
+    t8.identifier_unique,
+    t8.batch_bytesize,
+    t8.upload_attempts,
+    t8.batch_size,
+    t8.submitted,
+    t8.status,
+    t8.service_status,
+    t8.musicservice,
+    t8.musicservice_type,
+    t8.to_fulfil,
+    t8.to_fulfil_type,
+    t8.service_batch_identifier,
+    t8.identifier,
+    t8.identifier_string,
+    t8.exporter_hostname,
+    t8.export_path,
+    t8.modify_time,
+    t8.notes
+FROM
+    state51__Base t7,
+    state51__ExportBatch t8,
+    state51__Base t5,
+    state51__File t6,
+    state51__File__releaseformat tl1003,
+    state51__ExportBatch__exportfile tl1004
+WHERE
+    t7.id = t8.id           AND
+    t7._type = 158          AND
+    (tl1003.coll = t5.id AND tl1003.item = 104411058 AND tl1004.coll = t7.id AND tl1004.item = t5.id AND t8.batch_is_test = 0 AND t8.status = 'complete' AND t8.musicservice = 3143598) AND t5._type IN (157) AND t6.id = t5.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/MusicService/ITMS.pm#L370>MusicService/ITMS</a></td> <td>370</td> <td>state51::Base::fetch </td> <td>2</td> <td id="time">1.814</td> <td id="time">0.907</td> <td id="time">0.945</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.packshot,
+    t3.packshot_type,
+    t3.identifier_unique,
+    t3.meta_modify_time,
+    t3.released,
+    t3.explicit_content,
+    t3.status,
+    t3.source,
+    t3.source_type,
+    t3.parent,
+    t3.parent_type,
+    t3.sound_carrier,
+    t3.sound_carrier_type,
+    t3.release,
+    t3.release_type,
+    t3.identifier_string,
+    t3.ASIN,
+    t3.title,
+    t3.barcode,
+    t3.additional_identifier,
+    t3.catalog_no,
+    t3.modify_time,
+    t3.identifier,
+    t3.promo,
+    t3.multivolume_format,
+    t3.duration,
+    t3.volume_total_parts,
+    t3.volume_part,
+    t3.track_count,
+    t3.meta_valid_time,
+    t3.price_band,
+    t3.product_status,
+    t3.import_status,
+    t3.media_type,
+    t3.format_type,
+    t3.musicset,
+    t3.musicset_type,
+    t3.authorship,
+    t3.authorship_type,
+    t3.music_package,
+    t3.music_package_type,
+    t3.to_fulfil,
+    t3.to_fulfil_type,
+    t3.asset_controller,
+    t3.asset_controller_type,
+    t3.label,
+    t3.label_type,
+    t3.encoding,
+    t3.encoding_type,
+    t3.display_artist,
+    t3.p_copy,
+    t3.display_author,
+    t3.version_description,
+    t3.c_copy,
+    t3.toc_starts,
+    t3.grid,
+    t3.toc_tracks,
+    t3.description,
+    t3.import_notes,
+    t3.toc_lengths
+FROM
+    state51__Base t2,
+    state51__Album t3
+WHERE
+    t2.id = t3.id           AND
+    t2._type = 32           AND
+    (t3.source = 20182459 AND t3.status = 'live' AND (t3.volume_part IS NULL OR t3.volume_part = 1 OR t3.volume_part = 0) AND t3.barcode = '810523013810')
+</div></td></tr>
+<tr><td>(eval 2010)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>2</td> <td id="time">0.777</td> <td id="time">0.3885</td> <td id="time">0.403</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.short_name,
+    t3.name,
+    t3.code,
+    t3.modify_time,
+    t4.slot
+FROM
+    state51__Base t2,
+    state51__Classification t3,
+    state51__OrganisationAttribute__DistributionChannelType t4
+WHERE
+    t2.id = t3.id           AND
+    t2._type = 261          AND
+    t4.coll = 3143598 AND t4.item = t2.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/SQLHacks.pm#L986>SQLHacks</a></td> <td>986</td> <td>state51::Tangram::Driver::mysql::Storage::__ANON__ </td> <td>2</td> <td id="time">149.804</td> <td id="time">74.902</td> <td id="time">102.816</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">INSERT INTO scribe (ip, cookie, class, website, role_id, data, priority) VALUES ('146.101.142.35', '0.714973010196449', 'nonweb', 'test_itms_meta.pl', '15274', '  checking format is ok for export: part 1 of <<The Clean Up Man by Young Buck (C1001)>>', 'trace')</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/ReleaseFormat.pm#L1455>ReleaseFormat</a></td> <td>1455</td> <td>Tangram::RefOnDemand::FETCH </td> <td>2</td> <td id="time">0.653</td> <td id="time">0.3265</td> <td id="time">0.337</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__Classification.short_name,
+    state51__Classification.name,
+    state51__Classification.code,
+    state51__Classification.modify_time
+FROM
+    state51__Base,
+    state51__Classification
+WHERE
+    state51__Base.id = '5842808'	AND
+    state51__Base.id = state51__Classification.id</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/ReleaseFormat.pm#L1482>ReleaseFormat</a></td> <td>1482</td> <td>Tangram::RefOnDemand::FETCH </td> <td>2</td> <td id="time">0.701</td> <td id="time">0.3505</td> <td id="time">0.383</td> <td id="rows">2</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__Classification.short_name,
+    state51__Classification.name,
+    state51__Classification.code,
+    state51__Classification.modify_time,
+    state51__Classification.physical
+FROM
+    state51__Base,
+    state51__Classification
+WHERE
+    state51__Base.id = '5842330'	AND
+    state51__Base.id = state51__Classification.id</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/View/Ed/Base.pm#L276>View/Ed/Base</a></td> <td>276</td> <td>state51::Tangram::Driver::mysql::Storage::select </td> <td>1</td> <td id="time">0.603</td> <td id="time">0.603</td> <td id="time">0.603</td> <td id="rows">1</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.include_packshot_in_encode,
+    t3.include_metadata_in_encode,
+    t3.bitrate,
+    t3.preview_length,
+    t3.source,
+    t3.source_type,
+    t3.result_mime_minor,
+    t3.codec,
+    t3.channels,
+    t3.name,
+    t3.result_file_extension,
+    t3.family_options,
+    t3.description,
+    t3.family,
+    t3.modify_time
+FROM
+    state51__Base t2,
+    state51__Encoding t3
+WHERE
+    t2.id = t3.id           AND
+    (t3.name like 'ripper wav%%')
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Request/Export.pm#L610>Request/Export</a></td> <td>610</td> <td>state51::Base::fetch </td> <td>1</td> <td id="time">66.437</td> <td id="time">66.437</td> <td id="time">66.437</td> <td id="rows">84</td> <td id="rows">84</td> <td id="rows">84</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.type,
+    t3.request,
+    t3.request_type,
+    t3.entity,
+    t3.entity_type,
+    t3.asset,
+    t3.asset_type,
+    t3.modify_time,
+    t3.claim_worldwide,
+    t3.world,
+    t3.ended,
+    t3.began,
+    t3.pre_order_release_date,
+    t3.price_band,
+    t3.country_list,
+    t3.ownership_split
+FROM
+    state51__Base t2,
+    state51__Relationship t3
+WHERE
+    t2.id = t3.id           AND
+    t2._type IN (101, 102, 103)    AND
+    (t3.request = 95948542 AND t3.type = 'DeliverDesire')
+LIMIT
+    1000
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/MailService.pm#L31>MailService</a></td> <td>31</td> <td>state51::Tangram::Driver::mysql::Storage::select </td> <td>1</td> <td id="time">137.988</td> <td id="time">137.988</td> <td id="time">137.988</td> <td id="rows">1</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.success,
+    t3.error,
+    t3.skipped,
+    t3.score_threshold,
+    t3.status,
+    t3.source,
+    t3.source_type,
+    t3.last_person,
+    t3.last_person_type,
+    t3.images,
+    t3.images_type,
+    t3.destination,
+    t3.destination_type,
+    t3.mailservice,
+    t3.mailservice_type,
+    t3.parameters,
+    t3.identifier,
+    t3.template,
+    t3.subject,
+    t3.mail_from,
+    t3.modify_time,
+    t3.html_template,
+    create_time
+FROM
+    state51__Base t2,
+    state51__Mailout t3
+WHERE
+    t2.id = t3.id           AND
+    t2._type IN (47, 113, 61, 153, 63)    AND
+    (t3.mailservice = 39661846)
+ORDER BY
+    create_time DESC
+LIMIT
+    8
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Request/Export.pm#L608>Request/Export</a></td> <td>608</td> <td>state51::Base::fetch </td> <td>1</td> <td id="time">77.561</td> <td id="time">77.561</td> <td id="time">77.561</td> <td id="rows">931</td> <td id="rows">931</td> <td id="rows">931</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.priority,
+    t3.attempts,
+    t3.status,
+    t3.master,
+    t3.master_type,
+    t3.to_fulfil,
+    t3.to_fulfil_type,
+    t3.target_track,
+    t3.target_track_type,
+    t3.encode,
+    t3.encode_type,
+    t3.result,
+    t3.result_type,
+    t3.status_cause,
+    t3.encoder_hostname,
+    t3.target_transform,
+    t3.endpoint_used,
+    t3.modify_time,
+    t3.marked_complete,
+    t3.marked_claimed,
+    t3.marked_pending,
+    t3.status_modify_time
+FROM
+    state51__Base t2,
+    state51__FileTransform t3
+WHERE
+    t2.id = t3.id           AND
+    (t3.to_fulfil = 95948542)
+LIMIT
+    1000
+</div></td></tr>
+<tr><td>(eval 631)</td> <td>1</td> <td>Tangram::RefOnDemand::FETCH </td> <td>1</td> <td id="time">71.468</td> <td id="time">71.468</td> <td id="time">71.468</td> <td id="rows">1</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__Role.timezone,
+    state51__Role.email_score,
+    state51__Role.uniq,
+    state51__Role.identifier_unique,
+    state51__Role.mail_pref,
+    state51__Role.person,
+    state51__Role.person_type,
+    state51__Role.mobile_network,
+    state51__Role.name,
+    state51__Role.mobile_model,
+    state51__Role.address_postcode,
+    state51__Role.secret,
+    state51__Role.phone,
+    state51__Role.mobile,
+    state51__Role.address_region,
+    state51__Role.email,
+    state51__Role.address_town,
+    state51__Role.identifier_string,
+    state51__Role.fax,
+    state51__Role.mobile_manufacturer,
+    state51__Role.modify_time,
+    state51__Role.identifier,
+    state51__Role.address,
+    state51__Role.country,
+    state51__Role.country_type,
+    state51__Role.age,
+    state51__Role.parent,
+    state51__Role.parent_type,
+    state51__Role.collective,
+    state51__Role.collective_type,
+    state51__Role.newemail_key,
+    state51__Role.password,
+    state51__Role.nickname,
+    state51__Role.origin,
+    state51__Role.sex,
+    state51__Role.newemail,
+    state51__Role.dob
+FROM
+    state51__Base,
+    state51__Role
+WHERE
+    state51__Base.id = '54104'	AND
+    state51__Base.id = state51__Role.id</div></td></tr>
+<tr><td>(eval 1780)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>1</td> <td id="time">0.615</td> <td id="time">0.615</td> <td id="time">0.615</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t5.id,
+    t5._type,
+    t5.create_time,
+    t6.identifier,
+    t6.subject_date,
+    t6.last_update,
+    t6.description,
+    t6.status,
+    t6.source,
+    t6.source_type,
+    t6.name,
+    t6.modify_time,
+    t6.dtend,
+    t6.dtstart,
+    t6.owner,
+    t6.owner_type,
+    t6.artist,
+    t6.artist_type,
+    t6.current,
+    t6.current_type,
+    t7.slot
+FROM
+    state51__Base t5,
+    state51__Target t6,
+    state51__FileTransform__targets t7
+WHERE
+    t5.id = t6.id           AND
+    t5._type IN (162, 195, 205, 209, 175, 176, 185)    AND
+    t7.coll = 95950511 AND t7.item = t5.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Request/Export.pm#L606>Request/Export</a></td> <td>606</td> <td>state51::Base::fetch </td> <td>1</td> <td id="time">186.563</td> <td id="time">186.563</td> <td id="time">186.563</td> <td id="rows">15</td> <td id="rows">15</td> <td id="rows">15</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.batch_transferred,
+    t3.batch_is_test,
+    t3.test_already_exported,
+    t3.identifier_unique,
+    t3.batch_bytesize,
+    t3.upload_attempts,
+    t3.batch_size,
+    t3.submitted,
+    t3.status,
+    t3.service_status,
+    t3.musicservice,
+    t3.musicservice_type,
+    t3.to_fulfil,
+    t3.to_fulfil_type,
+    t3.service_batch_identifier,
+    t3.identifier,
+    t3.identifier_string,
+    t3.exporter_hostname,
+    t3.export_path,
+    t3.modify_time,
+    t3.notes
+FROM
+    state51__Base t2,
+    state51__ExportBatch t3
+WHERE
+    t2.id = t3.id           AND
+    t2._type = 158          AND
+    (t3.to_fulfil = 95948542)
+</div></td></tr>
+<tr><td>(eval 3078)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>1</td> <td id="time">1.076</td> <td id="time">1.076</td> <td id="time">1.076</td> <td id="rows">1</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t5.id,
+    t5._type,
+    t5.create_time,
+    t6.type,
+    t6.request,
+    t6.request_type,
+    t6.entity,
+    t6.entity_type,
+    t6.asset,
+    t6.asset_type,
+    t6.modify_time,
+    t6.claim_worldwide,
+    t6.world,
+    t6.ended,
+    t6.began,
+    t6.pre_order_release_date,
+    t6.price_band,
+    t6.country_list,
+    t6.ownership_split,
+    t7.slot
+FROM
+    state51__Base t5,
+    state51__Relationship t6,
+    state51__Use__relationships t7
+WHERE
+    t5.id = t6.id           AND
+    t5._type IN (101, 102, 103)    AND
+    t7.coll = 104514744 AND t7.item = t5.id
+</div></td></tr>
+<tr><td>(eval 1783)</td> <td>1</td> <td>Tangram::RefOnDemand::FETCH </td> <td>1</td> <td id="time">0.499</td> <td id="time">0.499</td> <td id="time">0.499</td> <td id="rows">1</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__Request.identifier_unique,
+    state51__Request.notes,
+    state51__Request.status,
+    state51__Request.source,
+    state51__Request.source_type,
+    state51__Request.organisation,
+    state51__Request.organisation_type,
+    state51__Request.handler,
+    state51__Request.handler_type,
+    state51__Request.creator,
+    state51__Request.creator_type,
+    state51__Request.identifier,
+    state51__Request.identifier_string,
+    state51__Request.external_id,
+    state51__Request.contact_email,
+    state51__Request.name,
+    state51__Request.modify_time,
+    state51__Request.number_of_products,
+    state51__Request.number_of_tracks,
+    state51__Request.requested_target_date,
+    state51__Request.priority,
+    state51__Request.task
+FROM
+    state51__Base,
+    state51__Request
+WHERE
+    state51__Base.id = '95948542'	AND
+    state51__Base.id = state51__Request.id</div></td></tr>
+<tr><td>(eval 3096)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>1</td> <td id="time">0.399</td> <td id="time">0.399</td> <td id="time">0.399</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.distribution_channel_type,
+    t3.musicservice,
+    t3.musicservice_type,
+    t3.modify_time,
+    t4.slot
+FROM
+    state51__Base t2,
+    state51__UseCondition t3,
+    state51__Use__conditions t4
+WHERE
+    t2.id = t3.id           AND
+    t4.coll = 104514744 AND t4.item = t2.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Request/Export.pm#L604>Request/Export</a></td> <td>604</td> <td>state51::Base::friends </td> <td>1</td> <td id="time">24.615</td> <td id="time">24.615</td> <td id="time">24.615</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t14.id,
+    t14._type,
+    t14.create_time,
+    t15.auto,
+    t15.priority,
+    t15.sticky_position,
+    t15.average_rating,
+    t15.added,
+    t15.updated,
+    t15.status,
+    t15.target,
+    t15.target_type,
+    t15.entry,
+    t15.entry_type,
+    t15.role,
+    t15.role_type,
+    t15.modify_time
+FROM
+    state51__Base t14,
+    state51__TargetEntry t15
+WHERE
+    t14.id = t15.id         AND
+    (t15.entry = 95948542)
+</div></td></tr>
+<tr><td>(eval 473)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>1</td> <td id="time">1.726</td> <td id="time">1.726</td> <td id="time">1.726</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t8.id,
+    t8._type,
+    t8.create_time,
+    t9.filesize,
+    t9.stored,
+    t9.uploader_ip,
+    t9.identifier_unique,
+    t9.crc32,
+    t9.subject_date,
+    t9.asset_controller,
+    t9.asset_controller_type,
+    t9.status,
+    t9.source,
+    t9.source_type,
+    t9.mime_major,
+    t9.extension,
+    t9.credit,
+    t9.secret,
+    t9.directory,
+    t9.identifier,
+    t9.caption,
+    t9.identifier_string,
+    t9.mime_minor,
+    t9.digest,
+    t9.search_tags,
+    t9.modify_time,
+    t9.creator,
+    t9.creator_type,
+    t9.description,
+    t9.incomplete,
+    t9.track,
+    t9.track_type,
+    t9.recording,
+    t9.recording_type,
+    t9.encoding,
+    t9.encoding_type,
+    t9.length,
+    t9.bitrate,
+    t9.channels,
+    t10.slot
+FROM
+    state51__Base t8,
+    state51__File t9,
+    state51__MailService__free_gifts t10
+WHERE
+    t8.id = t9.id           AND
+    t8._type = 33           AND
+    t10.coll = 39661846 AND t10.item = t8.id
+</div></td></tr>
+<tr><td>(eval 919)</td> <td>1</td> <td>Tangram::RefOnDemand::FETCH </td> <td>1</td> <td id="time">60.208</td> <td id="time">60.208</td> <td id="time">60.208</td> <td id="rows">1</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__OrganisationAttribute.organisation,
+    state51__OrganisationAttribute.organisation_type,
+    state51__OrganisationAttribute.email,
+    state51__OrganisationAttribute.identifier,
+    state51__OrganisationAttribute.domain,
+    state51__OrganisationAttribute.name,
+    state51__OrganisationAttribute.modify_time,
+    state51__OrganisationAttribute.test_genre_mappings,
+    state51__OrganisationAttribute.check_retail_licensor_any_terr,
+    state51__OrganisationAttribute.check_barcode_available,
+    state51__OrganisationAttribute.check_genre_available,
+    state51__OrganisationAttribute.check_retail_licensor_my_terr,
+    state51__OrganisationAttribute.check_not_already_exported,
+    state51__OrganisationAttribute.check_data_complete,
+    state51__OrganisationAttribute.check_deliver_desire,
+    state51__OrganisationAttribute.expects_config_file,
+    state51__OrganisationAttribute.conspiracy_priority,
+    state51__OrganisationAttribute.default_batch_size,
+    state51__OrganisationAttribute.ci_priority,
+    state51__OrganisationAttribute.support_delivery_without_media,
+    state51__OrganisationAttribute.support_multiple_price_bands,
+    state51__OrganisationAttribute.support_pre_order_release_date,
+    state51__OrganisationAttribute.development_status,
+    state51__OrganisationAttribute.support_per_track_price_band,
+    state51__OrganisationAttribute.support_licensed_export,
+    state51__OrganisationAttribute.delivery_hosts_conspiracy,
+    state51__OrganisationAttribute.default_transport_ci,
+    state51__OrganisationAttribute.export_path,
+    state51__OrganisationAttribute.email_completion_report_conspiracy_to,
+    state51__OrganisationAttribute.working_path,
+    state51__OrganisationAttribute.delivery_hosts_ci,
+    state51__OrganisationAttribute.default_transport_conspiracy,
+    state51__OrganisationAttribute.tla,
+    state51__OrganisationAttribute.musicservice_class,
+    state51__OrganisationAttribute.email_completion_report_ci_to
+FROM
+    state51__Base,
+    state51__OrganisationAttribute
+WHERE
+    state51__Base.id = '63452650'	AND
+    state51__Base.id = state51__OrganisationAttribute.id</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/MailService.pm#L20>MailService</a></td> <td>20</td> <td>state51::Base::friends </td> <td>1</td> <td id="time">23.691</td> <td id="time">23.691</td> <td id="time">23.691</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t11.id,
+    t11._type,
+    t11.create_time,
+    t12.auto,
+    t12.priority,
+    t12.sticky_position,
+    t12.average_rating,
+    t12.added,
+    t12.updated,
+    t12.status,
+    t12.target,
+    t12.target_type,
+    t12.entry,
+    t12.entry_type,
+    t12.role,
+    t12.role_type,
+    t12.modify_time
+FROM
+    state51__Base t11,
+    state51__TargetEntry t12
+WHERE
+    t11.id = t12.id         AND
+    (t12.entry = 39661846)
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/MusicService.pm#L2355>MusicService</a></td> <td>2355</td> <td>state51::Base::fetch </td> <td>1</td> <td id="time">325.611</td> <td id="time">325.611</td> <td id="time">325.611</td> <td id="rows">1</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t8.id,
+    t8._type,
+    t8.create_time,
+    t9.batch_transferred,
+    t9.batch_is_test,
+    t9.test_already_exported,
+    t9.identifier_unique,
+    t9.batch_bytesize,
+    t9.upload_attempts,
+    t9.batch_size,
+    t9.submitted,
+    t9.status,
+    t9.service_status,
+    t9.musicservice,
+    t9.musicservice_type,
+    t9.to_fulfil,
+    t9.to_fulfil_type,
+    t9.service_batch_identifier,
+    t9.identifier,
+    t9.identifier_string,
+    t9.exporter_hostname,
+    t9.export_path,
+    t9.modify_time,
+    t9.notes
+FROM
+    state51__Base t8,
+    state51__ExportBatch t9
+WHERE
+    t8.id = t9.id           AND
+    t8._type = 158          AND
+    (t9.musicservice = 3143598 AND t9.batch_is_test = 1)
+</div></td></tr>
+<tr><td>(eval 3083)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>1</td> <td id="time">0.484</td> <td id="time">0.484</td> <td id="time">0.484</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.distribution_channel_type,
+    t3.musicservice,
+    t3.musicservice_type,
+    t3.modify_time,
+    t4.slot
+FROM
+    state51__Base t2,
+    state51__UseCondition t3,
+    state51__Use__conditions t4
+WHERE
+    t2.id = t3.id           AND
+    t4.coll = 104514744 AND t4.item = t2.id
+</div></td></tr>
+<tr><td>(eval 3091)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>1</td> <td id="time">0.61</td> <td id="time">0.61</td> <td id="time">0.61</td> <td id="rows">1</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t5.id,
+    t5._type,
+    t5.create_time,
+    t6.type,
+    t6.request,
+    t6.request_type,
+    t6.entity,
+    t6.entity_type,
+    t6.asset,
+    t6.asset_type,
+    t6.modify_time,
+    t6.claim_worldwide,
+    t6.world,
+    t6.ended,
+    t6.began,
+    t6.pre_order_release_date,
+    t6.price_band,
+    t6.country_list,
+    t6.ownership_split,
+    t7.slot
+FROM
+    state51__Base t5,
+    state51__Relationship t6,
+    state51__Use__relationships t7
+WHERE
+    t5.id = t6.id           AND
+    t5._type IN (101, 102, 103)    AND
+    t7.coll = 104514744 AND t7.item = t5.id
+</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/Request/Export.pm#L607>Request/Export</a></td> <td>607</td> <td>state51::Base::fetch </td> <td>1</td> <td id="time">14.128</td> <td id="time">14.128</td> <td id="time">14.128</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t2.id,
+    t2._type,
+    t2.create_time,
+    t3.packshot,
+    t3.packshot_type,
+    t3.identifier_unique,
+    t3.meta_modify_time,
+    t3.released,
+    t3.explicit_content,
+    t3.status,
+    t3.source,
+    t3.source_type,
+    t3.parent,
+    t3.parent_type,
+    t3.sound_carrier,
+    t3.sound_carrier_type,
+    t3.release,
+    t3.release_type,
+    t3.identifier_string,
+    t3.ASIN,
+    t3.title,
+    t3.barcode,
+    t3.additional_identifier,
+    t3.catalog_no,
+    t3.modify_time,
+    t3.identifier,
+    t3.promo,
+    t3.multivolume_format,
+    t3.duration,
+    t3.volume_total_parts,
+    t3.volume_part,
+    t3.track_count,
+    t3.meta_valid_time,
+    t3.price_band,
+    t3.product_status,
+    t3.import_status,
+    t3.media_type,
+    t3.format_type,
+    t3.musicset,
+    t3.musicset_type,
+    t3.authorship,
+    t3.authorship_type,
+    t3.music_package,
+    t3.music_package_type,
+    t3.to_fulfil,
+    t3.to_fulfil_type,
+    t3.asset_controller,
+    t3.asset_controller_type,
+    t3.label,
+    t3.label_type,
+    t3.encoding,
+    t3.encoding_type,
+    t3.display_artist,
+    t3.p_copy,
+    t3.display_author,
+    t3.version_description,
+    t3.c_copy,
+    t3.toc_starts,
+    t3.grid,
+    t3.toc_tracks,
+    t3.description,
+    t3.import_notes,
+    t3.toc_lengths
+FROM
+    state51__Base t2,
+    state51__Album t3
+WHERE
+    t2.id = t3.id           AND
+    t2._type = 32           AND
+    (t3.to_fulfil = 95948542)
+</div></td></tr>
+<tr><td>(eval 2949)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>1</td> <td id="time">27.217</td> <td id="time">27.217</td> <td id="time">27.217</td> <td id="rows">1</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t11.id,
+    t11._type,
+    t11.create_time,
+    t12.voucher_required,
+    t12.notify_email,
+    t12.name,
+    t12.modify_time,
+    t13.slot
+FROM
+    state51__Base t11,
+    state51__Source t12,
+    state51__Request__sources_to_deliver t13
+WHERE
+    t11.id = t12.id         AND
+    t13.coll = 95948542 AND t13.item = t11.id
+</div></td></tr>
+<tr><td>(eval 1784)</td> <td>1</td> <td>Tangram::RefOnDemand::FETCH </td> <td>1</td> <td id="time">65.234</td> <td id="time">65.234</td> <td id="time">65.234</td> <td id="rows">1</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__Trackv2.play_gapless,
+    state51__Trackv2.hidden,
+    state51__Trackv2.preview_start_time,
+    state51__Trackv2.volume_part,
+    state51__Trackv2.altered_length,
+    state51__Trackv2.explicit_content,
+    state51__Trackv2.musicset,
+    state51__Trackv2.musicset_type,
+    state51__Trackv2.releaseformat,
+    state51__Trackv2.releaseformat_type,
+    state51__Trackv2.parent,
+    state51__Trackv2.parent_type,
+    state51__Trackv2.recording,
+    state51__Trackv2.recording_type,
+    state51__Trackv2.display_artist,
+    state51__Trackv2.track_number,
+    state51__Trackv2.p_copy,
+    state51__Trackv2.mix_version,
+    state51__Trackv2.c_copy,
+    state51__Trackv2.label_copy,
+    state51__Trackv2.modify_time
+FROM
+    state51__Base,
+    state51__Trackv2
+WHERE
+    state51__Base.id = '6950035'	AND
+    state51__Base.id = state51__Trackv2.id</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/View/Ed/Edit.pm#L29>View/Ed/Edit</a></td> <td>29</td> <td>state51::Tangram::Driver::mysql::Storage::load </td> <td>1</td> <td id="time">0.279</td> <td id="time">0.279</td> <td id="time">0.279</td> <td id="rows">1</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    state51__Base.create_time,
+    state51__TransformStep.include_packshot_in_encode,
+    state51__TransformStep.include_metadata_in_encode,
+    state51__TransformStep.preview_length,
+    state51__TransformStep.to,
+    state51__TransformStep.to_type,
+    state51__TransformStep.from,
+    state51__TransformStep.from_type,
+    state51__TransformStep.name,
+    state51__TransformStep.family_options,
+    state51__TransformStep.description,
+    state51__TransformStep.family,
+    state51__TransformStep.modify_time
+FROM
+    state51__Base,
+    state51__TransformStep
+WHERE
+    state51__Base.id = '105673380'	AND
+    state51__Base.id = state51__TransformStep.id</div></td></tr>
+<tr><td><a href=https://badger.state51.co.uk/cgi-bin/trac.cgi/browser/trunk/lib/state51/MusicService.pm#L2353>MusicService</a></td> <td>2353</td> <td>state51::Base::fetch </td> <td>1</td> <td id="time">45.605</td> <td id="time">45.605</td> <td id="time">45.605</td> <td id="rows">1</td> <td id="rows">1</td> <td id="rows">1</td> <td id="query"><p></p><div class="toggle">SELECT
+    t8.id,
+    t8._type,
+    t8.create_time,
+    t9.batch_transferred,
+    t9.batch_is_test,
+    t9.test_already_exported,
+    t9.identifier_unique,
+    t9.batch_bytesize,
+    t9.upload_attempts,
+    t9.batch_size,
+    t9.submitted,
+    t9.status,
+    t9.service_status,
+    t9.musicservice,
+    t9.musicservice_type,
+    t9.to_fulfil,
+    t9.to_fulfil_type,
+    t9.service_batch_identifier,
+    t9.identifier,
+    t9.identifier_string,
+    t9.exporter_hostname,
+    t9.export_path,
+    t9.modify_time,
+    t9.notes
+FROM
+    state51__Base t8,
+    state51__ExportBatch t9
+WHERE
+    t8.id = t9.id           AND
+    t8._type = 158          AND
+    (t9.musicservice = 3143598 AND t9.batch_is_test = 1)
+</div></td></tr>
+<tr><td>(eval 471)</td> <td>1</td> <td>Tangram::CollOnDemand::FETCH </td> <td>1</td> <td id="time">0.758</td> <td id="time">0.758</td> <td id="time">0.758</td> <td id="rows">0</td> <td id="rows">0</td> <td id="rows">0</td> <td id="query"><p></p><div class="toggle">SELECT
+    t5.id,
+    t5._type,
+    t5.create_time,
+    t6.name,
+    t6.modify_time,
+    t6.collective,
+    t6.collective_type,
+    t7.slot
+FROM
+    state51__Base t5,
+    state51__Authority t6,
+    state51__MailServices__default_authorities t7
+WHERE
+    t5.id = t6.id           AND
+    t5._type IN (58, 59)    AND
+    t7.coll = 39661846 AND t7.item = t5.id
+</div></td></tr>
+</table>
+</body>
+</html>
