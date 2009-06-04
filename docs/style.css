@@ -8,26 +8,29 @@ body {
 }
 
 table {
+  font-size: 0.7em;
+  background-color: #f3f3f3;
   border-top: 1px solid #999;
   border-left: 1px solid #999;
   border-collapse: collapse;
 }
 
 th,td {
+  font-size: 0.7em;
   border-right: 1px solid #999;
   border-bottom: 1px solid #999;
 }
 
 th {
-  background: #ccc;
+  background: #cccccc;
 }
 
 th#time {
-  background: #e22;
+  background: #0080ff;
 }
 
 td#time {
-  background: #e99;
+  background: #6ca6fe;
 }
 
 th#rows {
@@ -36,4 +39,12 @@ th#rows {
 
 td#rows {
   background: #9e9;
+}
+
+th#query {
+  background: #ff0080;
+}
+
+td#query {
+  background: #dc7dbe;
 }
