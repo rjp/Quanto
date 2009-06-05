@@ -1,5 +1,4 @@
 body {
-  font-size: 0.7em;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida", "Verdana", "Geneva", sans-serif;
   background-color: #fff;
   color:black;
@@ -16,7 +15,6 @@ table {
 }
 
 th,td {
-  font-size: 0.7em;
   border-right: 1px solid #999;
   border-bottom: 1px solid #999;
 }
