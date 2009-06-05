@@ -66,7 +66,7 @@ sub draw_stats {
                               $q->th({id => 'rows'},'Total'),
                               $q->th({id => 'rows'},'Avg.'),
                               $q->th({id => 'rows'},'Max'),
-                              $q->th({id => 'query'},'Query'),
+                              $q->th({id => 'query'},'First Query'),
                              )."\n",
                        $table
                    );
