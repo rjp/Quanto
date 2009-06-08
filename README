@@ -1,2 +1,9 @@
-The docs are, there are no docs.
+# Quanto
 
+## What it does
+
+## What you get
+
+  * cgi-bin/ - perl CGI to display aggregate data using JQuery
+  * docs/ - documentation, sample output etc
+  * lua/ 
