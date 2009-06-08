@@ -2,8 +2,23 @@
 
 ## What it does
 
+  Aggregates query comments to produce query stats about what in your code
+  is doing the most / most expensive queries.
+
 ## What you get
 
   * cgi-bin/ - perl CGI to display aggregate data using JQuery
   * docs/ - documentation, sample output etc
-  * lua/ 
+  * lua/ - The actual MySQL Proxy extension.
+
+## What does it look like
+
+   * http://andym.github.com/Quanto/sample_output/index.html
+
+## Where can I find out more
+
+See other resources on the homepage:
+
+    http://andym.github.com/Quanto/
+
+
