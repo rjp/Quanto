@@ -1,0 +1,48 @@
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida", "Verdana", "Geneva", sans-serif;
+  background-color: #fff;
+  color:black;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  font-size: 0.7em;
+  background-color: #f3f3f3;
+  border-top: 1px solid #999;
+  border-left: 1px solid #999;
+  border-collapse: collapse;
+}
+
+th,td {
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+}
+
+th {
+  background: #cccccc;
+}
+
+th#time {
+  background: #0080ff;
+}
+
+td#time {
+  background: #6ca6fe;
+}
+
+th#rows {
+  background: #2e2;
+}
+
+td#rows {
+  background: #9e9;
+}
+
+th#query {
+  background: #ff0080;
+}
+
+td#query {
+  background: #dc7dbe;
+}
