@@ -21,6 +21,10 @@ my $sort_field = 'times';
 sub draw_stats {
     my $q = CGI->new();
 
+    if (not ($dbi_str and $db_user and $db_pass)) {
+	fail_no_vars($q);
+    }
+
     if ($q->param('clear stats')) {
         clear_stats();        
     }
@@ -96,24 +100,124 @@ sub draw_stats {
     print $q->end_html;
 }
 
+sub fail_no_vars {
+    my ($q) = @_;
+
+    print $q->header();
+    print '<div id="content"></div>';
+    print $q->start_html(
+        -title => 'Quanto Error!',
+        -style => {'src' => '/style.css'},
+    );
+    print "<h1>Error!</h1>\n";
+    print "<p>Quanto can't find the enrivronment variables to connect to the database.</p>\n";
+    print "<p>You need to supply all of:\n";
+    print $q->ul(['DBI','DBUSER','DBPASS']);
+    print "</p>";
+    print $q->end_html();
+
+    exit(0);
+}
+
+sub fail_no_dbh {
+    my ($dbi_errstr) = @_;
+
+    my $q = CGI->new();
+
+    print $q->header();
+    print '<div id="content"></div>';
+    print $q->start_html(
+        -title => 'Quanto Error!',
+        -style => {'src' => '/style.css'},
+    );
+    print "<h1>Error!</h1>\n";
+    print "<p>When trying to connect to the database, Quanto got this error:</p>\n";
+    print "<p><pre>$dbi_errstr</pre></p>";
+    print "<p></p>\n";
+    print "<p>Current settings are:\n";
+    print $q->ul(['DBI='.$dbi_str,
+		  'DBUSER='.$db_user,
+		  'DBPASS='.$db_pass
+		  ]);
+    print "</p>";
+    print $q->end_html();
+
+    exit(0);
+}
+
+sub fail_do_show_stats {
+    my ($dbi_errstr) = @_;
+
+    my $probably_not_proxy = 0;
+    if ($dbi_errstr =~ m/You have an error in your SQL syntax/) {
+	$probably_not_proxy = 1;
+    }
+
+    my $q = CGI->new();
+
+    print $q->header();
+    print '<div id="content"></div>';
+    print $q->start_html(
+        -title => 'Quanto Error!',
+        -style => {'src' => '/style.css'},
+    );
+    print "<h1>Error!</h1>\n";
+    if ($probably_not_proxy) {
+	print "<p>The mysql server didn't understand the 'show stats' command, are you sure Quanto is pointing at the proxy? Is the proxy running the quanto collector script? (e.g. mysql-proxy --proxy-lua-script=quanto/lua/quanto_collector.lua)</p>";
+
+    }
+    else {
+	print "<p>When trying to run the 'show stats' command, Quanto got this error</p>\n";
+	print "<p<pre>$dbi_errstr</pre></p>";
+    }
+    print "<p></p>\n";
+    print "<p>Curret settings are:\n";
+    print $q->ul(['DBI='.$dbi_str,
+		  'DBUSER='.$db_user,
+		  'DBPASS='.$db_pass
+		  ]);
+    print "</p>";
+    print $q->end_html();
+
+    exit(0);
+}
+
 #
 # NO HTML BEYOND THIS POINT
 #
 
 sub get_dbh {
-    return DBI->connect($dbi_str, 
-                        $db_user, 
-                        $db_pass 
-                       );
+    my $dbh = DBI->connect($dbi_str, 
+			   $db_user, 
+			   $db_pass,
+			   { RaiseError => 1}
+			   );
+    if (not $dbh) {
+	fail_no_dbh($DBI::errstr);
+    }
+    
     # ping it? see if it's the proxy or the real thing?
+   
+    return $dbh;
 }
 
 sub get_stats {    
     my $dbh = get_dbh();
-        
-    # cope nicely if that's not supported or empty
-    my $stats = $dbh->selectall_hashref('show stats','module : line : called');
     
+    my $stats;
+
+    eval {
+	$stats = $dbh->selectall_hashref('show stats','module : line : called');
+    };
+    if ($@) {
+	if ($dbh->err) {
+	    fail_do_show_stats($dbh->errstr);
+	}
+	else {
+	    die $@;
+	}
+    }
+
     my @result;
     foreach my $key (keys %{$stats}) {
         my $row = $stats->{$key};
